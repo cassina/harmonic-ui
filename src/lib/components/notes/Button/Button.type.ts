@@ -1,2 +1,3 @@
-export type ButtonStyle = 'filled' | 'outline';
-export type ButtonRole = 'primary' | 'secondary' | 'tertiary' | 'warning' | 'error';
+export type ButtonStyle = 'filled' | 'tonal' | 'outline';
+export type ButtonColor = 'primary' | 'complementary' | 'warning' | 'error';
+export type ButtonState = 'enabled' | 'disabled' | 'hovered' | 'pressed';

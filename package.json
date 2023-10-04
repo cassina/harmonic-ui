@@ -11,12 +11,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "build:css": "tailwindcss build ./src/stories/global.css -o ./src/stories/css/global.output.css",
-    "build:storybook": "storybook build -c ./src/.storybook",
+    "build:css": "tailwindcss build src/storybook/stories/global.css -o ./src/storybook/stories/css/global.output.css",
+    "build:storybook": "storybook build -c src/storybook",
     "lint": "eslint ./src --ext ts,tsx ",
     "preview": "vite preview",
     "test": "vitest",
-    "storybook": "storybook dev -c ./src/.storybook -p 6006"
+    "storybook": "storybook dev -c src/storybook -p 6006"
   },
   "dependencies": {
     "chroma-js": "^2.4.2",

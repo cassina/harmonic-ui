@@ -1,9 +1,9 @@
-import {ButtonRole, ButtonStyle} from "@components/notes/Button/Button.type";
+import {ButtonColor, ButtonStyle} from "@components/notes/Button/Button.type";
 import {ComponentProps, MouseEventHandler} from "react";
 
 export interface ButtonProps extends ComponentProps<'button'> {
     label: string;
-    buttonRole?: ButtonRole;
+    buttonColor?: ButtonColor;
     buttonStyle?: ButtonStyle;
     onClick?: MouseEventHandler<HTMLButtonElement>;
     className?: string;

@@ -1,5 +1,5 @@
 // Import base Tailwind theme.
-import '../stories/css/global.output.css';
+import './stories/css/global.output.css';
 
 import type { Preview } from "@storybook/react";
 

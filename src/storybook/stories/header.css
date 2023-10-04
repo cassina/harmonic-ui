@@ -7,10 +7,10 @@
   justify-content: space-between;
 }
 
-.storybook-header svg {
-  display: inline-block;
-  vertical-align: top;
-}
+/*.storybook-header svg {*/
+/*  display: inline-block;*/
+/*  vertical-align: top;*/
+/*}*/
 
 .storybook-header h1 {
   font-weight: 700;
@@ -26,7 +26,7 @@
 }
 
 .storybook-header .welcome {
-  color: #333;
+  /*color: #333;*/
   font-size: 14px;
   margin-right: 10px;
 }

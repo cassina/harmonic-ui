@@ -2,15 +2,14 @@ import React from "react";
 import {
     COMMON_CLASSES,
     PRIMARY_CLASSES,
-    SECONDARY_CLASSES,
-    TERTIARY_CLASSES,
+    COMPLEMENTARY_CLASSES,
     OUTLINE_CLASSES, WARNING_CLASSES, ERROR_CLASSES
 } from './Button.styles';
 import {ButtonProps} from "@components/notes/Button/Button.interface";
-import {ButtonRole} from "@components/notes/Button/Button.type";
+import {ButtonColor} from "@components/notes/Button/Button.type";
 
 export const Button = ({
-    buttonRole = 'primary',
+    buttonColor = 'primary',
     buttonStyle = 'filled',
     label,
     onClick = undefined,
@@ -23,19 +22,27 @@ export const Button = ({
     // const textColorClass = getContrastColor(bgColor) === 'white' ? 'text-white' : 'text-black';
     //
     // console.log('text color class: ', textColorClass)
-    const computeStyles = (filledClass: string, outlineClass: string) => {
-        return buttonStyle === 'filled' ? `${filledClass}` : `${OUTLINE_CLASSES} ${outlineClass}`;
+    const computeStyles = (filledClass: string, outlineClass: string, tonalClass: string): string => {
+        switch (buttonStyle) {
+            case 'filled':
+                return filledClass;
+            case 'outline':
+                return `${OUTLINE_CLASSES} ${outlineClass}`;
+            case 'tonal':
+                return tonalClass;
+            default:
+                return '';
+        }
     };
 
-    const buttonStyles: Record<ButtonRole, string> = {
-        primary: computeStyles(PRIMARY_CLASSES.filled, PRIMARY_CLASSES.outline),
-        secondary: computeStyles(SECONDARY_CLASSES.filled, SECONDARY_CLASSES.outline),
-        tertiary: computeStyles(TERTIARY_CLASSES.filled, TERTIARY_CLASSES.outline),
-        warning: computeStyles(WARNING_CLASSES.filled, WARNING_CLASSES.outline),
-        error: computeStyles(ERROR_CLASSES.filled, ERROR_CLASSES.outline),
+    const buttonStyles: Record<ButtonColor, string> = {
+        primary: computeStyles(PRIMARY_CLASSES.filled, PRIMARY_CLASSES.outline, PRIMARY_CLASSES.tonal),
+        complementary: computeStyles(COMPLEMENTARY_CLASSES.filled, COMPLEMENTARY_CLASSES.outline, COMPLEMENTARY_CLASSES.tonal),
+        warning: computeStyles(WARNING_CLASSES.filled, WARNING_CLASSES.outline, WARNING_CLASSES.tonal),
+        error: computeStyles(ERROR_CLASSES.filled, ERROR_CLASSES.outline, ERROR_CLASSES.tonal),
     };
 
-    const styles = `${buttonStyles[buttonRole]} ${COMMON_CLASSES}`;
+    const styles = `${buttonStyles[buttonColor]} ${COMMON_CLASSES}`;
 
     console.log('Class Name: ', styles)
 

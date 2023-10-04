@@ -26,7 +26,7 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    buttonRole: 'primary',
+    buttonColor: 'primary',
     buttonStyle: 'filled',
     label: 'Signup',
     onClick: (e: MouseEvent) => console.log(`The event timestamp: ${e.timeStamp}`),
