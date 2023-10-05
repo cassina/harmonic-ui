@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "build:css": "tailwindcss build src/storybook/stories/global.css -o ./src/storybook/stories/css/global.output.css",
+    "build:css": "tailwindcss build src/storybook/stories/css/global.css -o ./src/storybook/stories/css/global.output.css",
     "build:storybook": "storybook build -c src/storybook",
     "lint": "eslint ./src --ext ts,tsx ",
     "preview": "vite preview",

@@ -31,3 +31,4 @@ dist/
 
 ## Storybook
 storybook-static/
+src/storybook/stories/css/global.output.css
