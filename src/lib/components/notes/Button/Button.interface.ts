@@ -5,6 +5,5 @@ export interface ButtonProps extends ComponentProps<'button'> {
     label: string;
     buttonColor?: ButtonColor;
     buttonStyle?: ButtonStyle;
-    onClick?: MouseEventHandler<HTMLButtonElement>;
     className?: string;
 }
