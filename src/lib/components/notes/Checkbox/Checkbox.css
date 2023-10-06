@@ -1,21 +1,21 @@
 /* Base class for the checkbox */
-.checkbox {
+input[type="checkbox"] {
     @apply relative peer shrink-0 appearance-none mt-1 border-2 rounded-sm bg-white checked:border-0;
 }
 
 /* Styles for checkbox colors */
-.checkbox-primary {
+input[type="checkbox"].primary {
     @apply border-primary-500 checked:bg-primary-500;
 }
 
-.checkbox-complementary {
+input[type="checkbox"].complementary {
     @apply border-complementary-500 checked:bg-complementary-500;
 }
 
-.checkbox-warning {
+input[type="checkbox"].warning {
     @apply border-warning-500 checked:bg-warning-500;
 }
 
-.checkbox-error {
+input[type="checkbox"].error {
     @apply border-error-500 checked:bg-error-500;
 }
