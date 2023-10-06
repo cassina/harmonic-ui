@@ -3,7 +3,6 @@ import { describe, expect, it, vi, afterEach } from 'vitest';
 import { render, fireEvent, cleanup } from "@testing-library/react";
 import Button from './Button';
 import {ButtonColor, ButtonStyle} from "@components/notes/Button/Button.type";
-import {BTN_BASE_CLASSES, BTN_STYLES_MAP} from "@components/notes/Button/Button.styles";
 
 describe('Button', () => {
     afterEach(cleanup);
@@ -52,28 +51,9 @@ describe('Button', () => {
                 const appliedClasses = getByText(currentLabel).className || '';
                 // Example: for primary and filled, the classes might be "bg-primary-600 text-white hover:bg-primary-700"
 
-                expect(appliedClasses.includes(`${BTN_BASE_CLASSES} ${BTN_STYLES_MAP[color][style]}`)).toBe(true);
+                expect(appliedClasses.includes(`${color} ${style}`)).toBe(true);
             });
         });
-    });
-
-    // Check for button states
-    it('should handle button states correctly', () => {
-        const { getByRole } = render(<Button buttonColor="primary" buttonStyle="filled" label="Test Label" />);
-        const button = getByRole('button') as HTMLButtonElement;
-
-        // Initially, the button should be enabled
-        expect(button.disabled).toBe(false);
-
-        // On mouse over, we can check for hover styles (this is a naive check)
-        fireEvent.mouseOver(button);
-        const hoverStyles = "hover"; // example
-        expect(button.className.includes(hoverStyles)).toBe(true);
-
-        // On mouse down, we can check for pressed styles (this is a naive check)
-        fireEvent.mouseDown(button);
-        const pressedStyles = "active"; // example
-        expect(button.className.includes(pressedStyles)).toBe(true);
     });
 
     it('should handle the disabled property correctly', () => {

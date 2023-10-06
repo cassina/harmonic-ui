@@ -1,9 +1,11 @@
+/**
+ * @deprecated
+ */
 import { ButtonColor, ButtonStyle } from "./Button.type";
 
 // Base classes for button
 export const BTN_BASE_CLASSES = 'font-medium text-sm rounded-md px-5 py-2.5 mr-2 mb-2';
 
-// Mapping of styles for each button color
 export const BTN_STYLES_MAP: Record<ButtonColor, Record<ButtonStyle, string>> = {
     primary: {
         filled: 'bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800',

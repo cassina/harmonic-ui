@@ -1,5 +1,5 @@
 import {ButtonColor, ButtonStyle} from "@components/notes/Button/Button.type";
-import {ComponentProps, MouseEventHandler} from "react";
+import {ComponentProps} from "react";
 
 export interface ButtonProps extends ComponentProps<'button'> {
     label: string;

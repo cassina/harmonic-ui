@@ -20,6 +20,6 @@
       "@utils/*": ["./src/lib/utils/*"]
     }
   },
-  "include": ["."],
+  "include": ["./src/lib"],
   "exclude": ["./node_modules", "./dist", "./storybook-static"]
 }

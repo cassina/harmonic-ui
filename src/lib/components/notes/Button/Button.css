@@ -1,0 +1,56 @@
+/* Base classes for button */
+button {
+    @apply font-medium text-sm rounded-md px-5 py-2.5 mr-2 mb-2 border;
+}
+
+/* Primary Button Styles */
+button.primary.filled {
+    @apply bg-primary-600 text-white border-primary-600 hover:bg-primary-700 active:bg-primary-800;
+}
+
+button.primary.tonal {
+    @apply bg-primary-400 text-white border-primary-400 hover:bg-primary-500;
+}
+
+button.primary.outline {
+    @apply text-primary-500 border-primary-500 hover:bg-primary-100;
+}
+
+/* Complementary Button Styles */
+button.complementary.filled {
+    @apply bg-complementary-600 text-white border-complementary-600 hover:bg-complementary-700 active:bg-complementary-800;
+}
+
+button.complementary.tonal {
+    @apply bg-complementary-400 text-white border-complementary-400 hover:bg-complementary-500;
+}
+
+button.complementary.outline {
+    @apply bg-transparent text-complementary-500 border-complementary-500 hover:bg-complementary-100;
+}
+
+/* Warning Button Styles */
+button.warning.filled {
+    @apply bg-warning-600 text-white border-warning-600 hover:bg-warning-700 active:bg-warning-800;
+}
+
+button.warning.tonal {
+    @apply bg-warning-400 text-white border-warning-400 hover:bg-warning-500;
+}
+
+button.warning.outline {
+    @apply bg-transparent text-warning-500 border-warning-500 hover:bg-warning-100;
+}
+
+/* Error Button Styles */
+button.error.filled {
+    @apply bg-error-600 text-white border-error-600 hover:bg-error-700 active:bg-error-800;
+}
+
+button.error.tonal {
+    @apply bg-error-400 border-error-400 text-white hover:bg-error-500;
+}
+
+button.error.outline {
+    @apply bg-transparent text-error-500 border-error-500 hover:bg-error-100;
+}

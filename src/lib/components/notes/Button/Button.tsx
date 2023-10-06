@@ -1,28 +1,26 @@
+import './Button.css';
 import React from "react";
 import {ButtonProps} from "@components/notes/Button/Button.interface";
-import {
-    getStylesForColor
-} from './Button.styles';
+import {mergeClasses} from "@utils/index";
 
 /**
  * A clickable element, often used to submit forms or trigger actions
  */
 const Button = ({
-    label,
-    buttonColor = 'primary',
-    buttonStyle = 'filled',
     type = 'button',
-    onClick = undefined,
-    className = undefined,
+    label,
+    buttonColor,
+    buttonStyle,
+    onClick,
+    className,
     ...props
 }: ButtonProps) => {
-    const styles = `${getStylesForColor(buttonColor, buttonStyle)}`;
-
+    const styles = mergeClasses(className, buttonColor, buttonStyle);
     return (
         <button
             onClick={onClick}
             type={type}
-            className={`${className || ''} ${styles} `}
+            className={styles}
             {...props}
         >
             {label}
