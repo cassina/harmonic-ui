@@ -5,13 +5,13 @@ import {mergeClasses} from "@utils/index";
 
 // Special thanks to https://github.com/marekrozmus/blog-styling-react-checkbox-with-tailwind
 const Checkbox = ({
-   checked,
-   checkboxColor = 'primary',
-   onChange,
-   className,
-   ...props
+    checkboxColor = 'primary',
+    checked,
+    onChange,
+    className,
+    ...props
 }: CheckboxProps) => {
-    const baseClasses = 'peer'; // The peer class can't be used with the @apply directive
+    const baseClasses = 'peer'; // The peer class can't be used with the @apply directive.
     const styles = mergeClasses(baseClasses, className, checkboxColor);
     return(
         <input

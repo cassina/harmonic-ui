@@ -1,7 +1,6 @@
 import path from "path";
 import type { StorybookConfig } from "@storybook/react-vite";
 
-
 const config: StorybookConfig = {
   stories: ["../**/*.stories.@(ts|tsx)", "./stories/*.mdx"],
   addons: [
@@ -16,7 +15,7 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: "tag",
-    defaultName: 'Documentation'
+    defaultName: 'Theory'
   },
   viteFinal: async (config) => {
     return {
