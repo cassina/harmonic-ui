@@ -12,10 +12,5 @@ const harmonicTailwindConfig: TailwindConfig = {
 }
 
 export default function withHarmony(userConfig: TailwindConfig) {
-    console.log(`Let's play some music!`, harmonicTailwindConfig)
-
-    const deep = deepmerge(harmonicTailwindConfig, userConfig);
-
-    console.log('The merged config: ', JSON.stringify(deep))
-    return deep;
+    return deepmerge(harmonicTailwindConfig, userConfig);
 }
