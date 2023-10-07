@@ -15,7 +15,7 @@ describe('<Checkbox />', () => {
         expect(checkbox).toBeDefined();
         expect(checkbox.checked).toBe(false);
         expect(checkbox.type).toBe('checkbox');
-        expect(checkbox.className).toEqual(`primary`);
+        expect(checkbox.className).toEqual(`peer primary`);
     });
 
     it('should render in an unchecked state by default', () => {
