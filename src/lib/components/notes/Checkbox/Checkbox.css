@@ -1,9 +1,10 @@
 /* Base class for the checkbox */
 input[type="checkbox"] {
-    @apply relative peer shrink-0 appearance-none mt-1 border-2 rounded-sm bg-white checked:border-0;
+    @apply w-4 h-4 relative shrink-0 appearance-none mt-1 border-2 rounded-sm checked:border-0;
 }
 
 /* Styles for checkbox colors */
+
 input[type="checkbox"].primary {
     @apply border-primary-500 checked:bg-primary-500;
 }
