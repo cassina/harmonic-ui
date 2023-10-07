@@ -34,14 +34,6 @@ export default defineConfig({
                     react: 'React'
                 }
             },
-            // plugins: [
-            //     postcss({
-            //         // If you want to extract the CSS to a separate file (optional):
-            //         extract: true,
-            //         // If you use .scss or .sass, make sure to also install and set up `sass`:
-            //         // sass: true,
-            //     }),
-            // ],
         },
     },
 })
