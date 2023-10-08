@@ -1,6 +1,18 @@
 import {LabelProps} from "./Label.interface";
 import {mergeClasses} from "@utils/index";
 
+/**
+ * Label Component
+ *
+ * Renders a label element for form inputs.
+ *
+ * @prop {LabelProps}
+ *
+ * @example
+ * ```jsx
+ * <Label htmlFor="testInput" text="Test Label" />
+ * ```
+ */
 const Label = ({
     htmlFor,
     text,

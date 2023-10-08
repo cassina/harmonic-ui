@@ -5,6 +5,19 @@ import React from "react";
 import {SVGProps} from "./SVG.interface";
 import {shapes} from "./SVG.config";
 
+/**
+ * SVG Component
+ *
+ * A versatile SVG renderer that can display various shapes like heart, skull, and tick.
+ *
+ * @prop {SVGProps}
+ *
+ * @example
+ * ```jsx
+ * <SVG shape="heart" />
+ * ```
+ */
+
 export const SVG = (props: SVGProps) => {
     const {
         fill = "none",

@@ -47,18 +47,18 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Checkbox: Story = {
+export const Type_Checkbox: Story = {
     args: {
-        type: 'checkbox',
         id: 'checkbox-id',
+        type: 'checkbox',
         label: 'I like pizza',
     },
 };
 
 export const RadioToDo: Story = {
     args: {
-        type: 'radio',
         id: 'radio-id',
+        type: 'radio',
         label: 'TODO',
     },
 };

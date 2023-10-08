@@ -1,6 +1,18 @@
 import Label from "@components/notes/Label/Label";
 import {TextInputProps} from "../Input.interface";
 
+/**
+ * TextInput Component
+ *
+ * Renders a text input field with an associated label. By default, it renders a single-line text input.
+ *
+ * @prop {TextInputProps}
+ *
+ * @example
+ * ```jsx
+ * <TextInput id="sample-id" label="Sample Label" value="Sample Value" onChange={handleOnChange} />
+ * ```
+ */
 const TextInput = ({
     type = 'text',
     id,

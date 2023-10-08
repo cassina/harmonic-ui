@@ -3,8 +3,18 @@ import React from "react";
 import {ButtonProps} from "@components/notes/Button/Button.interface";
 import {mergeClasses} from "@utils/index";
 
+
 /**
- * A clickable element, often used to submit forms or trigger actions
+ * Button Component
+ *
+ * A clickable element, often used to submit forms or trigger actions.
+ *
+ * @prop {ButtonProps}
+ *
+ * @example
+ * ```jsx
+ * <Button label="Click me" onClick={() => alert('Button clicked!')} />
+ * ```
  */
 const Button = ({
     type = 'button',
