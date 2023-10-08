@@ -1,14 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import ChoiceInput from './ChoiceInput';
-import { CheckboxColor } from "@components/notes/Checkbox/Checkbox.type";
-
-const CHECKBOX_COLORS: {[key: string]: CheckboxColor} = {
-    PRIMARY: 'primary',
-    COMPLEMENTARY: 'complementary',
-    WARNING: 'warning',
-    ERROR: 'error'
-};
 
 const meta = {
     title: 'Chords/ChoiceInput',
@@ -17,31 +9,7 @@ const meta = {
         layout: 'centered',
     },
     tags: ['autodocs'],
-    argTypes: {
-        type: {
-            options: ['checkbox', 'radio'],
-            control: { type: 'select' }
-        },
-        id: {
-            control: 'text',
-        },
-        label: {
-            control: 'text',
-        },
-        checked: {
-            control: 'boolean'
-        },
-        checkboxColor: {
-            options: CHECKBOX_COLORS,
-            control: { type: 'select' }
-        },
-        value: {
-            control: 'text',
-        },
-        onChange: {
-            action: 'changed',
-        },
-    },
+    argTypes: {},
 } satisfies Meta<typeof ChoiceInput>;
 
 export default meta;
@@ -50,15 +18,15 @@ type Story = StoryObj<typeof meta>;
 export const Type_Checkbox: Story = {
     args: {
         id: 'checkbox-id',
-        type: 'checkbox',
         label: 'I like pizza',
+        type: 'checkbox',
     },
 };
 
 export const RadioToDo: Story = {
     args: {
         id: 'radio-id',
+        label: 'To do Implementation',
         type: 'radio',
-        label: 'TODO',
     },
 };

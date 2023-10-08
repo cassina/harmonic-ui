@@ -5,5 +5,4 @@ export interface ButtonProps extends ComponentProps<'button'> {
     label: string;
     buttonColor?: ButtonColor;
     buttonStyle?: ButtonStyle;
-    className?: string;
 }

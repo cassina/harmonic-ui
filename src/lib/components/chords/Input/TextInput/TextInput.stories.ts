@@ -9,24 +9,7 @@ const meta = {
         layout: 'centered',
     },
     tags: ['autodocs'],
-    argTypes: {
-        type: {
-            options: ['text', 'password', 'email', 'url', 'search'],
-            control: { type: 'select' }
-        },
-        id: {
-            control: 'text',
-        },
-        label: {
-            control: 'text',
-        },
-        value: {
-            control: 'text',
-        },
-        onChange: {
-            action: 'changed',
-        },
-    },
+    argTypes: {},
 } satisfies Meta<typeof TextInput>;
 
 export default meta;

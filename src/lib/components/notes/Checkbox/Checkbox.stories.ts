@@ -13,9 +13,7 @@ const meta = {
     // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
     tags: ['autodocs'],
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-    argTypes: {
-        // backgroundColor: { control: 'color' },
-    },
+    argTypes: {},
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;
@@ -26,6 +24,7 @@ export const Primary: Story = {
     args: {
         checked: false,
         checkboxColor: 'primary',
+        shape: 'tick',
         onChange: (e: ChangeEvent) => console.log(`The event timestamp: ${e.timeStamp}`),
     },
 };
