@@ -15,6 +15,8 @@
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
     "paths": {
+      "@types": ["./src/lib/types"],
+      "@interfaces": ["./src/lib/interfaces"],
       "@config/*": ["./src/lib/config/*"],
       "@components/*": ["./src/lib/components/*"],
       "@utils/*": ["./src/lib/utils/*"]

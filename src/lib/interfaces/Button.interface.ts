@@ -1,4 +1,4 @@
-import {ButtonColor, ButtonStyle} from "@components/notes/Button/Button.type";
+import {ButtonColor, ButtonStyle} from "@types";
 import {ComponentProps} from "react";
 
 export interface ButtonProps extends ComponentProps<'button'> {

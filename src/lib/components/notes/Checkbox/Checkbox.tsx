@@ -1,8 +1,8 @@
-import './Checkbox.css';
 import React from 'react';
-import { CheckboxProps } from './Checkbox.interface';
+import { CheckboxProps } from '@interfaces';
 import {mergeClasses} from "@utils/index";
 import SVG from "@components/notes/SVG/SVG";
+import {getCheckboxStyles} from "@components/notes/Checkbox/Checkbox.styles";
 
 /**
  * Checkbox Component
@@ -24,8 +24,9 @@ const Checkbox = ({
     className,
     ...props
 }: CheckboxProps) => {
-    const baseClasses = 'peer'; // The peer class can't be used with the @apply directive.
-    const styles = mergeClasses(baseClasses, className, checkboxColor);
+    const theme = getCheckboxStyles(checkboxColor)
+    const styles = mergeClasses(className, theme)
+
     return(
         // I have always been of opinion that consistency is the last refuge of the unimaginative. — Oscar Wilde
         <div className={'flex gap-1'}>

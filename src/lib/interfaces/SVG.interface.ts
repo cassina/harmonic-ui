@@ -1,4 +1,4 @@
-import {SVGLineCap, SVGLineJoin, SVGShape} from "./SVG.type";
+import {SVGLineCap, SVGLineJoin, SVGShape} from "@types";
 
 export interface SVGProps {
     fill?: string;

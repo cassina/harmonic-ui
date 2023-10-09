@@ -1,4 +1,4 @@
-import {LabelProps} from "./Label.interface";
+import {LabelProps} from "@interfaces";
 import {mergeClasses} from "@utils/index";
 
 /**

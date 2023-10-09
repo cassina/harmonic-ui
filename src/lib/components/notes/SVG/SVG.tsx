@@ -1,9 +1,8 @@
-import './SVG.css';
-
 import React from "react";
 
-import {SVGProps} from "./SVG.interface";
+import {SVGProps} from "@interfaces";
 import {shapes} from "./SVG.config";
+import {getSVGTheme} from "@components/notes/SVG/SVG.styles";
 
 /**
  * SVG Component
@@ -40,9 +39,12 @@ export const SVG = (props: SVGProps) => {
         }
     };
 
+    // Get Styles
+    const styles = getSVGTheme();
+
     return (
         <svg
-            className={'peer-checked:block'}
+            className={styles}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill={fill}

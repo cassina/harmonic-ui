@@ -1,6 +1,6 @@
-import { CheckboxColor } from "./Checkbox.type";
+import { CheckboxColor } from "@types";
 import { ComponentProps } from "react";
-import {SVGShape} from "@components/notes/SVG/SVG.type";
+import {SVGShape} from "@types";
 
 export interface CheckboxProps extends ComponentProps<'input'> {
     shape?: SVGShape;

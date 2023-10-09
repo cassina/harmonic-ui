@@ -2,7 +2,6 @@
   "name": "@cassina/harmonic-ui",
   "main": "dist/harmonic-ui.js",
   "types": "dist/src/lib/main.d.ts",
-  "style": "dist/style.css",
   "files": [
     "dist"
   ],
@@ -41,14 +40,12 @@
     "@typescript-eslint/parser": "^6.7.4",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "@vitest/coverage-v8": "^0.34.6",
-    "autoprefixer": "^10.4.16",
     "deepmerge": "^4.3.1",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.14",
     "jsdom": "^22.1.0",
-    "postcss": "^8.4.31",
     "storybook": "^7.4.5",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.0.2",

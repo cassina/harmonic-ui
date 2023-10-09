@@ -1,5 +1,5 @@
 import Label from "@components/notes/Label/Label";
-import {TextInputProps} from "../Input.interface";
+import {TextInputProps} from "@interfaces";
 
 /**
  * TextInput Component
@@ -19,6 +19,7 @@ const TextInput = ({
     label,
     value,
     onChange,
+    className,
     ...props
 }: TextInputProps) => {
     return (
@@ -29,7 +30,7 @@ const TextInput = ({
                            text={label}
                            className={'block m-1'} />
                 )}
-                <input className={'border p-2 rounded-md'}
+                <input className={`border p-2 rounded-md ${className}`}
                        type={type}
                        name={id}
                        id={id}

@@ -1,7 +1,7 @@
-import './Button.css';
 import React from "react";
-import {ButtonProps} from "@components/notes/Button/Button.interface";
+import {ButtonProps} from "@interfaces";
 import {mergeClasses} from "@utils/index";
+import {getStylesForColor} from "@components/notes/Button/Button.styles";
 
 
 /**
@@ -19,13 +19,17 @@ import {mergeClasses} from "@utils/index";
 const Button = ({
     type = 'button',
     label,
-    buttonColor,
-    buttonStyle,
+    buttonColor = 'primary',
+    buttonStyle = 'filled',
     onClick,
     className,
     ...props
 }: ButtonProps) => {
-    const styles = mergeClasses(className, buttonColor, buttonStyle);
+    // const styles = mergeClasses(className, 'button', buttonColor, buttonStyle);
+    // const results = getStyles(buttonColor, buttonStyle);
+    // console.log(`Are styles working: ${results}`)
+    const theme = getStylesForColor(buttonColor, buttonStyle)
+    const styles = mergeClasses(className, theme);
     return (
         <button
             onClick={onClick}

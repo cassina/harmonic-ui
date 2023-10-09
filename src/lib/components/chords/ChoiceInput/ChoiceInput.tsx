@@ -1,6 +1,6 @@
 import Checkbox from "@components/notes/Checkbox/Checkbox";
 import Label from "@components/notes/Label/Label";
-import {ChoiceInputProps} from "../Input.interface";
+import {ChoiceInputProps} from "@interfaces";
 
 /**
  * ChoiceInput Component
@@ -21,7 +21,8 @@ const ChoiceInput = ({
     shape = 'tick',
     checkboxColor,
     checked,
-    onChange
+    onChange,
+    ...props
 }: ChoiceInputProps) => {
     return (
         <>
@@ -32,7 +33,9 @@ const ChoiceInput = ({
                               checkboxColor={checkboxColor}
                               shape={shape}
                               checked={checked}
-                              onChange={onChange} />
+                              onChange={onChange}
+                              {...props}
+                    />
                     {label && (
                         <Label htmlFor={id} text={label} />
                     )}

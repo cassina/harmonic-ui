@@ -2,6 +2,7 @@ import React from 'react';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 import Checkbox from './Checkbox';
 import {describe, expect, it, afterEach, vi} from 'vitest';
+import {getCheckboxStyles} from "@components/notes/Checkbox/Checkbox.styles";
 
 describe('<Checkbox />', () => {
     afterEach(cleanup);
@@ -15,7 +16,7 @@ describe('<Checkbox />', () => {
         expect(checkbox).toBeDefined();
         expect(checkbox.checked).toBe(false);
         expect(checkbox.type).toBe('checkbox');
-        expect(checkbox.className).toEqual(`peer primary`);
+        expect(checkbox.className).toEqual(getCheckboxStyles('primary'));
     });
 
     it('should render in an unchecked state by default', () => {
