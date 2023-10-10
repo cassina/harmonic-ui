@@ -25,9 +25,6 @@ const Button = ({
     className,
     ...props
 }: ButtonProps) => {
-    // const styles = mergeClasses(className, 'button', buttonColor, buttonStyle);
-    // const results = getStyles(buttonColor, buttonStyle);
-    // console.log(`Are styles working: ${results}`)
     const theme = getStylesForColor(buttonColor, buttonStyle)
     const styles = mergeClasses(className, theme);
     return (

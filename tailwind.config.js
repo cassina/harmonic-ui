@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import {harmonicTailwindTheme} from "./src/lib/config/harmonic-tailwind-theme.ts";
+import {harmonicTailwindTheme} from "@config/harmonic-tailwind-theme";
 
 export default {
   content: [

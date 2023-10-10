@@ -13,6 +13,5 @@ const harmonicTailwindConfig: TailwindConfig = {
 
 export default function withHarmony(userConfig: TailwindConfig) {
     const finalConfig = deepmerge(harmonicTailwindConfig, userConfig)
-    console.info('The final config colors: \n', finalConfig.theme?.extend?.colors)
     return finalConfig;
 }
