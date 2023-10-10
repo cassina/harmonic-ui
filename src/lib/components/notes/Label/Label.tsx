@@ -1,5 +1,6 @@
 import {LabelProps} from "@interfaces";
 import {mergeClasses} from "@utils/index";
+import {getLabelStyle} from "@components/notes/Label/Label.style";
 
 /**
  * Label Component
@@ -22,7 +23,7 @@ const Label = ({
 
     return(
         <label htmlFor={htmlFor}
-               className={mergeClasses(className, 'leading-6 text-xs')}
+               className={mergeClasses(className, getLabelStyle())}
                {...props}>
             {text}
         </label>

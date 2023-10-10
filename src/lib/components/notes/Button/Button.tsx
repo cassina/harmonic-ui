@@ -1,7 +1,7 @@
 import React from "react";
 import {ButtonProps} from "@interfaces";
 import {mergeClasses} from "@utils/index";
-import {getStylesForColor} from "@components/notes/Button/Button.styles";
+import {getButtonStyle} from "@components/notes/Button/Button.style";
 
 
 /**
@@ -25,7 +25,7 @@ const Button = ({
     className,
     ...props
 }: ButtonProps) => {
-    const theme = getStylesForColor(buttonColor, buttonStyle)
+    const theme = getButtonStyle(buttonColor, buttonStyle)
     const styles = mergeClasses(className, theme);
     return (
         <button

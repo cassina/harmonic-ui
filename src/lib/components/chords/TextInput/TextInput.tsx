@@ -1,5 +1,7 @@
 import Label from "@components/notes/Label/Label";
 import {TextInputProps} from "@interfaces";
+import {mergeClasses} from "@utils/index";
+import {getTextInputStyle} from "@components/chords/TextInput/TextInput.style";
 
 /**
  * TextInput Component
@@ -23,22 +25,19 @@ const TextInput = ({
     ...props
 }: TextInputProps) => {
     return (
-        <div className="input-wrapper">
-            <div className={'my-5'}>
-                {label && (
-                    <Label htmlFor={id}
-                           text={label}
-                           className={'block m-1'} />
-                )}
-                <input className={`border p-2 rounded-md ${className}`}
-                       type={type}
-                       name={id}
-                       id={id}
-                       value={value}
-                       onChange={onChange}
-                       {...props} />
-            </div>
-        </div>
+        <>
+            {label && (
+                <Label htmlFor={id}
+                       text={label}/>
+            )}
+            <input className={mergeClasses(className, getTextInputStyle())}
+                   type={type}
+                   name={id}
+                   id={id}
+                   value={value}
+                   onChange={onChange}
+                   {...props} />
+        </>
     );
 };
 

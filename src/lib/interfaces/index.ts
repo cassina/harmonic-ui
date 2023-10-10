@@ -3,3 +3,4 @@ export * from './Button.interface';
 export * from './Checkbox.interface';
 export * from './Label.interface';
 export * from './SVG.interface';
+export * from './Common.interface';

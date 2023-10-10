@@ -3,7 +3,7 @@ import { describe, expect, it, vi, afterEach } from 'vitest';
 import { render, fireEvent, cleanup } from "@testing-library/react";
 import Button from './Button';
 import {ButtonColor, ButtonStyle} from "../../../types/Button.types";
-import {getStylesForColor} from "@components/notes/Button/Button.styles";
+import {getButtonStyle} from "@components/notes/Button/Button.style";
 
 describe('Button', () => {
     afterEach(cleanup);
@@ -52,7 +52,7 @@ describe('Button', () => {
                 const appliedClasses = getByText(currentLabel).className || '';
                 // Example: for primary and filled, the classes might be "bg-primary-600 text-white hover:bg-primary-700"
 
-                expect(appliedClasses.includes(getStylesForColor(color, style))).toBe(true);
+                expect(appliedClasses.includes(getButtonStyle(color, style))).toBe(true);
             });
         });
     });

@@ -2,7 +2,7 @@ import React from "react";
 
 import {SVGProps} from "@interfaces";
 import {shapes} from "./SVG.config";
-import {getSVGTheme} from "@components/notes/SVG/SVG.styles";
+import {getSVGStyle} from "@components/notes/SVG/SVG.style";
 
 /**
  * SVG Component
@@ -40,7 +40,7 @@ export const SVG = (props: SVGProps) => {
     };
 
     // Get Styles
-    const styles = getSVGTheme();
+    const styles = getSVGStyle();
 
     return (
         <svg

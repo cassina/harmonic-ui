@@ -2,7 +2,7 @@ import React from 'react';
 import { CheckboxProps } from '@interfaces';
 import {mergeClasses} from "@utils/index";
 import SVG from "@components/notes/SVG/SVG";
-import {getCheckboxStyles} from "@components/notes/Checkbox/Checkbox.styles";
+import {getCheckboxStyle} from "@components/notes/Checkbox/Checkbox.style";
 
 /**
  * Checkbox Component
@@ -24,7 +24,7 @@ const Checkbox = ({
     className,
     ...props
 }: CheckboxProps) => {
-    const theme = getCheckboxStyles(checkboxColor)
+    const theme = getCheckboxStyle(checkboxColor)
     const styles = mergeClasses(className, theme)
 
     return(
