@@ -1,13 +1,12 @@
 {
   "name": "@cassina/harmonic-ui",
-  "type": "module",
+  "main": "dist/harmonic-ui.js",
+  "types": "dist/src/lib/main.d.ts",
   "files": [
     "dist"
   ],
-  "main": "dist/harmonic-ui.js",
-  "types": "dist/src/lib/main.d.ts",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

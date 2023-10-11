@@ -25,7 +25,7 @@ export default defineConfig({
             entry: resolve(__dirname, './src/lib/main.ts'), // Update the entry file path
             name: 'HarmonicUI',
             fileName: 'harmonic-ui',
-            formats: ['es']
+            formats: ['cjs']
         },
         rollupOptions: {
             external: ['react', 'react/jsx-runtime'], // Externalize React and other dependencies
@@ -33,7 +33,7 @@ export default defineConfig({
                 globals: {
                     react: 'React'
                 }
-            }
+            },
         },
     },
 })

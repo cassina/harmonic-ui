@@ -1,56 +1,39 @@
 import React from "react";
-import {
-    COMMON_CLASSES,
-    PRIMARY_CLASSES,
-    COMPLEMENTARY_CLASSES,
-    OUTLINE_CLASSES, WARNING_CLASSES, ERROR_CLASSES
-} from './Button.styles';
-import {ButtonProps} from "@components/notes/Button/Button.interface";
-import {ButtonColor} from "@components/notes/Button/Button.type";
+import {ButtonProps} from "@interfaces";
+import {mergeClasses} from "@utils/index";
+import {getButtonStyle} from "@components/notes/Button/Button.style";
 
-export const Button = ({
+
+/**
+ * Button Component
+ *
+ * A clickable element, often used to submit forms or trigger actions.
+ *
+ * @prop {ButtonProps}
+ *
+ * @example
+ * ```jsx
+ * <Button label="Click me" onClick={() => alert('Button clicked!')} />
+ * ```
+ */
+const Button = ({
+    type = 'button',
+    label,
     buttonColor = 'primary',
     buttonStyle = 'filled',
-    label,
-    onClick = undefined,
-    type = 'button',
-    className = undefined
+    onClick,
+    className,
+    ...props
 }: ButtonProps) => {
-
-    // Compute text color based on background color
-    // const bgColor = tailwindTheme.extend.colors[buttonRole][500];
-    // const textColorClass = getContrastColor(bgColor) === 'white' ? 'text-white' : 'text-black';
-    //
-    // console.log('text color class: ', textColorClass)
-    const computeStyles = (filledClass: string, outlineClass: string, tonalClass: string): string => {
-        switch (buttonStyle) {
-            case 'filled':
-                return filledClass;
-            case 'outline':
-                return `${OUTLINE_CLASSES} ${outlineClass}`;
-            case 'tonal':
-                return tonalClass;
-            default:
-                return '';
-        }
-    };
-
-    const buttonStyles: Record<ButtonColor, string> = {
-        primary: computeStyles(PRIMARY_CLASSES.filled, PRIMARY_CLASSES.outline, PRIMARY_CLASSES.tonal),
-        complementary: computeStyles(COMPLEMENTARY_CLASSES.filled, COMPLEMENTARY_CLASSES.outline, COMPLEMENTARY_CLASSES.tonal),
-        warning: computeStyles(WARNING_CLASSES.filled, WARNING_CLASSES.outline, WARNING_CLASSES.tonal),
-        error: computeStyles(ERROR_CLASSES.filled, ERROR_CLASSES.outline, ERROR_CLASSES.tonal),
-    };
-
-    const styles = `${buttonStyles[buttonColor]} ${COMMON_CLASSES}`;
-
-    console.log('Class Name: ', styles)
-
+    const theme = getButtonStyle(buttonColor, buttonStyle)
+    const styles = mergeClasses(className, theme);
     return (
         <button
             onClick={onClick}
             type={type}
-            className={`${className || ''} ${styles}`}>
+            className={styles}
+            {...props}
+        >
             {label}
         </button>
     )

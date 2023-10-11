@@ -2,20 +2,21 @@ import {Config as TailwindConfig} from "tailwindcss";
 import {harmonicTailwindTheme} from "@config/harmonic-tailwind-theme";
 import deepmerge from "deepmerge";
 
-const harmonicTailwindConfig: TailwindConfig = {
-    content: [
-        "./node_modules/@cassina/harmonic-ui/src/**/*.{js,ts,jsx,tsx}",
-    ],
-    theme: {
-        ...harmonicTailwindTheme
-    }
+interface WithHarmonyOptions {
+    userConfig: TailwindConfig;
+    nodeModulesPath?: string;
 }
 
-export default function withHarmony(userConfig: TailwindConfig) {
-    console.log(`Let's play some music!`, harmonicTailwindConfig)
+export default function withHarmony({ userConfig, nodeModulesPath = './node_modules' }: WithHarmonyOptions) {
+    const harmonicTailwindConfig: TailwindConfig = {
+        content: [
+            `${nodeModulesPath}/@cassina/harmonic-ui/dist/**/*.{js,jsx}`
+        ],
+        theme: {
+            ...harmonicTailwindTheme
+        }
+    };
 
-    const deep = deepmerge(harmonicTailwindConfig, userConfig);
-
-    console.log('The merged config: ', JSON.stringify(deep))
-    return deep;
+    const finalConfig = deepmerge(harmonicTailwindConfig, userConfig);
+    return finalConfig;
 }
