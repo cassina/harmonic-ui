@@ -17,10 +17,12 @@ import {getButtonStyle} from "@components/notes/Button/Button.style";
  * ```
  */
 const Button = ({
-    type = 'button',
     label,
+    icon,
+    type = 'button',
     buttonColor = 'primary',
     buttonStyle = 'filled',
+    iconX = 'left',
     onClick,
     className,
     ...props
@@ -31,10 +33,11 @@ const Button = ({
         <button
             onClick={onClick}
             type={type}
-            className={styles}
-            {...props}
-        >
-            {label}
+            className={`${styles}`}
+            {...props}>
+            {iconX === 'left' && icon}
+            <span>{label}</span>
+            {iconX === 'right' && icon}
         </button>
     )
 };
