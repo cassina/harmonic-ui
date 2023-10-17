@@ -15,6 +15,11 @@ jobs:
         with:
           node-version: 18.x
       - run: npm ci
+      - name: Upload node_modules
+        uses: actions/upload-artifact@v2
+        with:
+          name: node-modules
+          path: node_modules
 
   build:
     needs: install
@@ -28,16 +33,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
+      - name: Download node_modules
+        uses: actions/download-artifact@v2
+        with:
+          name: node-modules
+          path: node_modules
       - run: npm run build
-#      - name: Upload built project
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: built-project
-#          path: ./**  # Adjust this to match the path of your built project
 
   test:
-    needs: build
+    needs: [install, build]
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -48,24 +52,26 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
+      - name: Download node_modules
+        uses: actions/download-artifact@v2
+        with:
+          name: node-modules
+          path: node_modules
       - run: npm run test:ci
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     needs: [install, build, test]
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 18.x ]
     steps:
       - uses: actions/checkout@v3
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
-          cache: 'npm'
-#      - name: Download built project
-#        uses: actions/download-artifact@v2
-#        with:
-#          name: built-project
+          node-version: ${{ matrix.node-version }}
       - name: Publish to npm
         run: npm publish
         env:
