@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - '**'
-  pull_request:
-    branches:
-      - '**'
 
 jobs:
   install:
@@ -33,11 +30,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build
-      - name: Upload built project
-        uses: actions/upload-artifact@v2
-        with:
-          name: built-project
-          path: ./**  # Adjust this to match the path of your built project
+#      - name: Upload built project
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: built-project
+#          path: ./**  # Adjust this to match the path of your built project
 
   test:
     needs: build
@@ -65,10 +62,10 @@ jobs:
         with:
           node-version: 18.x
           cache: 'npm'
-      - name: Download built project
-        uses: actions/download-artifact@v2
-        with:
-          name: built-project
+#      - name: Download built project
+#        uses: actions/download-artifact@v2
+#        with:
+#          name: built-project
       - name: Publish to npm
         run: npm publish
         env:
