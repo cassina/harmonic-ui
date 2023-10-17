@@ -1,78 +1,31 @@
-name: CI/CD Workflow
+name: Node.js CI
 
 on:
   push:
-    branches:
-      - '**'
+    branches: [ "**" ]
 
 jobs:
-  install:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-      - run: npm ci
-      - name: Upload node_modules
-        uses: actions/upload-artifact@v2
-        with:
-          name: node-modules
-          path: node_modules
-
   build:
-    needs: install
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Download node_modules
-        uses: actions/download-artifact@v2
-        with:
-          name: node-modules
-          path: node_modules
-      - run: npm run build
 
-  test:
-    needs: [install, build]
-    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [18.x]
+
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Node.js
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Download node_modules
-        uses: actions/download-artifact@v2
-        with:
-          name: node-modules
-          path: node_modules
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build
       - run: npm run test:ci
 
-  deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    needs: [install, build, test]
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [ 18.x ]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
+      # New step to publish to npm
       - name: Publish to npm
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
