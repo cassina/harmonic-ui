@@ -9,4 +9,5 @@ export interface BaseStyle {
     special?: string;
     pointer?: string;
     display?: string;
+    disabled?: string;
 }
