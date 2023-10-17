@@ -4,11 +4,15 @@
 
 ### **Clone the Repository**
 
+To begin, clone the repository by running the following command in your terminal:
+
 ```bash
 git clone git@github.com:cassina/harmonic-ui.git
 ```
 
 ### **Install Dependencies**
+
+Next, install the project dependencies.
 
 ```bash
 cd harmonic-ui
@@ -18,24 +22,48 @@ npm install
 ### Build the project
 
 ```bash
+git fetch origin
+git checkout [your new branch]
+```
+
+```bash
 npm run build
+```
+
+### Test
+
+To run in watch mode:
+
+```bash
+npm run test
+```
+
+To trigger a single run:
+
+```bash
+npm run test:ci
 ```
 
 ## Development Workflow 👩‍💻
 
-- Our default branch is `development` and pull requests should be targeted to this branch
-- Create a new branch from the issue you have assigned
-- Checkout the new branch:
+- The default branch is `development`, and pull requests should be targeted to this branch.
+- Create a new branch from the assigned issue.
+- Checkout the new branch.
+- We use `vitest` and `@testing-library/react` to test the project.
+  - TDD Flow:
+    - Create a failing test:
 
-    ```bash
-    git fetch origin
-    git checkout [your new branch]
-    ```
-
+        ```tsx
+          it('should render correctly with the given label', () => {
+            const { getByText } = render(<Button buttonColor="primary" buttonStyle="filled" label="Test Label" />);
+            expect(getByText('Test Label')).toBeDefined();
+          });
+        ```
+      - Then fix your implementation so the tests pass.
 
 ### Developing with Storybook
 
-After you start storybook, you can make changes to the code and save the files, if you make changes to the styles or classes run the following to see the changes in the UI:
+After starting Storybook, you can make changes to the code and save the files. If you make changes to the styles or classes, run the following commands to see the changes in the UI:
 
 ```bash
 npm run storybook
@@ -44,19 +72,19 @@ npm run build:css
 
 ### Link to a local project
 
-To create an `npm` link to your local `harmonic-ui`, run the following in the root directory:
+To create an `npm` link to your local `harmonic-ui`, execute the following command in the root directory:
 
 ```bash
 npm link
 ```
 
-If you already have an app where you want to test components, run the following in your app’s root directory:
+If you already have an app where you want to test components, execute the following command in your app's root directory:
 
 ```bash
 npm link harmonic-ui
 ```
 
-Or You can create a new app with next.js with:
+Alternatively, you can create a new app with Next.js by following these steps:
 
 ```bash
 npx create-next-app@latest
