@@ -52,6 +52,9 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.6.0",
-    "vitest": "^0.34.6"
+    "vitest": "^0.34.6",
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
+    "husky": "^8.0.3"
   }
 }
