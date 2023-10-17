@@ -19,6 +19,7 @@ import {getButtonStyle} from "@components/notes/Button/Button.style";
 const Button = ({
     label,
     icon,
+    disabled = false,
     type = 'button',
     buttonColor = 'primary',
     buttonStyle = 'filled',
@@ -31,6 +32,7 @@ const Button = ({
     const styles = mergeClasses(className, theme);
     return (
         <button
+            disabled={disabled}
             onClick={onClick}
             type={type}
             className={`${styles}`}
