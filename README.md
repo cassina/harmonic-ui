@@ -210,4 +210,4 @@ export default AuthForm;
 
 ## Contributing ✋
 
-Please see the [CONTRIBUTE.md](https://www.notion.so/CONTRIBUTE.md) file
+Please see the [CONTRIBUTE.md](./CONTRIBUTE.md) file
