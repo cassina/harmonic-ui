@@ -1,42 +1,42 @@
 # Harmonic UI 🎵
 
-> Harmonize your devlopment with the power of music.
+> Harmonize your development with the power of music.
 >
 
-**Harmonic UI** is a **React & Tailwind** **Component Library** crafted to showcase the **Harmonic Design Theory**. Drawing inspiration from the universality and structure of music, **Component Driven Development** and, **Atomic Design**, this library serves as a tangible representation of how musical elements can be translated into the realm of component design.
+**Harmonic UI** is a **React & Tailwind** **Component Library** created to showcase the **Harmonic Design Theory**. Taking inspiration from the universality and structure of music, as well as the principles of **Component Driven Development** and **Atomic Design**, this library demonstrates how musical elements can be translated into the realm of component design.
 
 ## Overview 📖
 
-The **Harmonic Design Theory** uses musical analogies to describe and structure design systems. Just as music is composed of notes, chords, and progressions, our design system is built upon similar foundational elements like **CDD** and **Atomic Design** but with some differences and focused in **Tailwind** and **React**:
+The **Harmonic Design Theory** uses musical analogies to describe and structure design systems. Similar to how music is composed of notes, chords, and progressions, our design system is built upon foundational elements such as **CDD** and **Atomic Design**, with a focus on **Tailwind** and **React**:
 
-- **Notes**: The atomic components like Buttons, Headings, Labels, and Checkboxes.
+- **Notes**: Represented by atomic components like Buttons, Headings, Labels, and Checkboxes.
 - **Chords**: Combinations of notes that come together to form a cohesive unit.
-- **Progressions**: Client components. Sequences of chords that guide the user experience.
+- **Progressions**: Client components that guide the user experience through sequences of chords.
 - **Structures**: The overarching layouts and grids.
 - **Dynamics**: Context Components like an `<AuthContextProvider/>`.
-- **Compositions**: Complete pages or views like a Home page or Settings page.
-- **Suites**: Groups of Compositions like a Web App or a Docs Site or a Marketing Site.
+- **Compositions**: Complete pages or views such as a Home page or Settings page.
+- **Suites**: Groups of Compositions, such as a Web App, Docs Site, or Marketing Site.
 
-Harmonic UI is a testament to the power of this theory, providing real-world examples and implementations of these concepts.
+Harmonic UI serves an example to prove this theory, providing real-world examples and implementations of these concepts.
 
-## Install
+## Install 💿
 
 ```bash
 npm install harmonic-ui
 ```
 
-## Configure
+## Configure ⚙️
 
-Harmonic UI has its own color system, it supports 4 colors:
+Harmonic UI has its own color system that supports 4 colors:
 
 - Primary
 - Complementary
 - Warning
 - Error
 
-In order to use the built-in Harmonic UI color system with Tailwind, updated your `tailwind.config.ts` import the `withHarmony` function and export your configuration.
+To use the built-in Harmonic UI color system with Tailwind, update your `tailwind.config.ts` file. Import the `withHarmony` function and export your configuration.
 
-### This in a minimal example to use the default Harmonic-UI color theme
+### This is a minimal example of how to use the default Harmonic-UI color theme:
 
 ```tsx
 import { withHarmony } from 'harmonic-ui';
@@ -56,9 +56,10 @@ export default withHarmony({
   // in the same path as your tailwind config.
   nodeModulesPath: '../../node_modules
 });
+
 ```
 
-### This in an example with custom colors
+### This in an example with custom colors:
 
 ```tsx
 import { withHarmony } from 'harmonic-ui';
@@ -134,25 +135,33 @@ const config: Config = {
 export default withHarmony({
   userConfig: config,
 });
+
 ```
 
-## Use
+## Use 🏗️
 
 You can now use any component in the library like so:
 
 ```tsx
+import {Button} from 'harmonic-ui';
+
 <Button label="Click me!" />
+
 ```
 
-You can also pass color and style properties to the button:
+### You can also pass color and style properties to the button:
 
 ```tsx
+import {Button} from 'harmonic-ui';
+
 <Button label="Click me!"
         buttonColor="complementary"
         buttonStyle="outline" />
+
 ```
 
-### A Form Example
+### A Form Example using note and chord components:
+
 ```tsx
 import {Button, TextInput} from 'harmonic-ui';
 import {ComponentProps} from "react";
@@ -176,13 +185,13 @@ const AuthForm = ({
               {...props}
         >
             <div>
-                <TextInput id="email" 
-                           label={'Email'} 
-                           type={'email'} 
+                <TextInput id="email"
+                           label={'Email'}
+                           type={'email'}
                            disabled={disabled} />
-                <TextInput id="password" 
-                           label={'Password'} 
-                           type={'password'} 
+                <TextInput id="password"
+                           label={'Password'}
+                           type={'password'}
                            disabled={disabled} />
             </div>
 
@@ -196,8 +205,9 @@ const AuthForm = ({
 );
 
 export default AuthForm;
+
 ```
 
-## Contributing
+## Contributing ✋
 
-Please see the [CONTRIBUTE.md](./CONTRIBUTE.md) file
+Please see the [CONTRIBUTE.md](https://www.notion.so/CONTRIBUTE.md) file
