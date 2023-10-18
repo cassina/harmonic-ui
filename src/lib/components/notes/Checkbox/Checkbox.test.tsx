@@ -1,6 +1,6 @@
 import React from 'react';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import Checkbox from './Checkbox';
+import {Checkbox} from './Checkbox';
 import {describe, expect, it, afterEach, vi} from 'vitest';
 import {getCheckboxStyle} from "@components/notes/Checkbox/Checkbox.style";
 

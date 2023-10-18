@@ -2,7 +2,7 @@ import React from 'react';
 import {cleanup, render} from '@testing-library/react';
 import {describe, expect, it, afterEach} from 'vitest';
 
-import SVG from './SVG';
+import {SVG} from './SVG';
 import {shapes} from "./SVG.config";
 
 describe('<SVG />', () => {

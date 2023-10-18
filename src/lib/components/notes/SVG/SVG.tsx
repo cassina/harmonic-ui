@@ -57,5 +57,3 @@ export const SVG = (props: SVGProps) => {
         </svg>
     );
 };
-
-export default SVG;

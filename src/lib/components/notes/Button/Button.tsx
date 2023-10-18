@@ -16,7 +16,7 @@ import {getButtonStyle} from "@components/notes/Button/Button.style";
  * <Button label="Click me" onClick={() => alert('Button clicked!')} />
  * ```
  */
-const Button = ({
+export const Button = ({
     label,
     icon,
     disabled = false,
@@ -44,5 +44,4 @@ const Button = ({
     )
 };
 
-export default Button;
 

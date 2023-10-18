@@ -1,12 +1,14 @@
 {
-  "name": "@cassina/harmonic-ui",
+  "name": "harmonic-ui",
   "main": "dist/harmonic-ui.js",
   "types": "dist/src/lib/main.d.ts",
   "files": [
     "dist"
   ],
-  "private": true,
+  "homepage": "https://github.com/cassina/harmonic-ui",
+  "private": false,
   "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -15,6 +17,8 @@
     "lint": "eslint ./src --ext ts,tsx ",
     "preview": "vite preview",
     "test": "vitest",
+    "test:ci": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "storybook": "storybook dev -c src/storybook -p 6006"
   },
   "dependencies": {
@@ -23,6 +27,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
     "@storybook/addon-essentials": "^7.4.5",
     "@storybook/addon-interactions": "^7.4.5",
     "@storybook/addon-links": "^7.4.5",
@@ -45,6 +51,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.14",
+    "husky": "^8.0.3",
     "jsdom": "^22.1.0",
     "storybook": "^7.4.5",
     "tailwindcss": "^3.3.3",

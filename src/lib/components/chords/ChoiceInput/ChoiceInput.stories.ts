@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import ChoiceInput from './ChoiceInput';
+import {ChoiceInput} from './ChoiceInput';
 
 const meta = {
     title: 'Chords/ChoiceInput',

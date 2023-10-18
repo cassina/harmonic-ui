@@ -10,7 +10,7 @@ interface WithHarmonyOptions {
 export default function withHarmony({ userConfig, nodeModulesPath = './node_modules' }: WithHarmonyOptions) {
     const harmonicTailwindConfig: TailwindConfig = {
         content: [
-            `${nodeModulesPath}/@cassina/harmonic-ui/dist/**/*.{js,jsx}`
+            `${nodeModulesPath}/harmonic-ui/dist/**/*.{js,jsx}`
         ],
         theme: {
             ...harmonicTailwindTheme
@@ -18,5 +18,6 @@ export default function withHarmony({ userConfig, nodeModulesPath = './node_modu
     };
 
     const finalConfig = deepmerge(harmonicTailwindConfig, userConfig);
+    console.log('FINAL: ', finalConfig.content)
     return finalConfig;
 }
