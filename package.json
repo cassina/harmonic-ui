@@ -1,5 +1,5 @@
 {
-  "name": "@cassina/harmonic-ui",
+  "name": "harmonic-ui",
   "main": "dist/harmonic-ui.js",
   "types": "dist/src/lib/main.d.ts",
   "files": [
@@ -16,6 +16,7 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:ci": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "storybook": "storybook dev -c src/storybook -p 6006"
   },
   "dependencies": {

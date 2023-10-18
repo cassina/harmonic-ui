@@ -1,17 +1,11 @@
-import Button from "./components/notes/Button/Button";
-import Checkbox from "./components/notes/Checkbox/Checkbox";
-import SVG from "./components/notes/SVG/SVG";
-import Label from "./components/notes/Label/Label";
-import TextInput from "@components/chords/TextInput/TextInput";
-import ChoiceInput from "@components/chords/ChoiceInput/ChoiceInput";
+export * from "./components/notes/Button/Button";
+export * from "./components/notes/Checkbox/Checkbox";
+export * from "./components/notes/SVG/SVG";
+export * from "./components/notes/Label/Label";
+export * from "./components/chords/TextInput/TextInput";
+export * from "./components/chords/ChoiceInput/ChoiceInput";
 import withHarmony from './config/with-harmony';
 
 export {
-    Button,
-    Checkbox,
-    SVG,
-    Label,
-    TextInput,
-    ChoiceInput,
     withHarmony
 }

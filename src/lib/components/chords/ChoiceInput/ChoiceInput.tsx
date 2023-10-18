@@ -1,5 +1,5 @@
-import Checkbox from "@components/notes/Checkbox/Checkbox";
-import Label from "@components/notes/Label/Label";
+import {Checkbox} from "@components/notes/Checkbox/Checkbox";
+import {Label} from "@components/notes/Label/Label";
 import {ChoiceInputProps} from "@interfaces";
 
 /**
@@ -14,7 +14,7 @@ import {ChoiceInputProps} from "@interfaces";
  * <ChoiceInput id="test" label="Test Label" />
  * ```
  */
-const ChoiceInput = ({
+export const ChoiceInput = ({
     id,
     label,
     type = 'checkbox',
@@ -48,5 +48,3 @@ const ChoiceInput = ({
         </>
     );
 };
-
-export default ChoiceInput;
