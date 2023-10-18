@@ -1,4 +1,4 @@
-import Button from '@components/notes/Button/Button';
+import {Button} from '@components/notes/Button/Button';
 import './header.css';
 
 type User = {

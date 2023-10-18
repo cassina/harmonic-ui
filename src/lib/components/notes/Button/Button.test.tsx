@@ -3,7 +3,7 @@ import { describe, expect, it, vi, afterEach } from 'vitest';
 import { render, fireEvent, cleanup } from "@testing-library/react";
 import {ButtonColor, ButtonStyle} from "@types";
 import {getButtonStyle} from "@components/notes/Button/Button.style";
-import Button from './Button';
+import {Button} from './Button';
 
 describe('Button', () => {
     afterEach(cleanup);

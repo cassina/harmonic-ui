@@ -1,6 +1,6 @@
 import React from 'react';
 import { cleanup, render } from '@testing-library/react';
-import Label from './Label';
+import {Label} from './Label';
 import { describe, expect, it, afterEach } from 'vitest';
 
 describe('<Label />', () => {

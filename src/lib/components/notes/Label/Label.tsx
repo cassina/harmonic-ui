@@ -14,7 +14,7 @@ import {getLabelStyle} from "@components/notes/Label/Label.style";
  * <Label htmlFor="testInput" text="Test Label" />
  * ```
  */
-const Label = ({
+export const Label = ({
     htmlFor,
     text,
     className,
@@ -29,5 +29,3 @@ const Label = ({
         </label>
     );
 };
-
-export default Label;

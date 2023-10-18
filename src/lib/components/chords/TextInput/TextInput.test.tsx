@@ -1,6 +1,6 @@
 import React from 'react';
 import { cleanup, fireEvent, render } from '@testing-library/react';
-import TextInput from './TextInput';
+import {TextInput} from './TextInput';
 import { describe, expect, it, afterEach, vi } from 'vitest';
 
 describe('<TextInput />', () => {

@@ -1,12 +1,14 @@
 {
-  "name": "@cassina/harmonic-ui",
+  "name": "harmonic-ui",
   "main": "dist/harmonic-ui.js",
   "types": "dist/src/lib/main.d.ts",
   "files": [
     "dist"
   ],
-  "private": true,
+  "homepage": "https://github.com/cassina/harmonic-ui",
+  "private": false,
   "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -16,6 +18,7 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:ci": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "storybook": "storybook dev -c src/storybook -p 6006"
   },
   "dependencies": {

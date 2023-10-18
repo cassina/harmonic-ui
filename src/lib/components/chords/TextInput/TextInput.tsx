@@ -1,4 +1,4 @@
-import Label from "@components/notes/Label/Label";
+import {Label} from "@components/notes/Label/Label";
 import {TextInputProps} from "@interfaces";
 import {mergeClasses} from "@utils/index";
 import {getTextInputStyle} from "@components/chords/TextInput/TextInput.style";
@@ -15,7 +15,7 @@ import {getTextInputStyle} from "@components/chords/TextInput/TextInput.style";
  * <TextInput id="sample-id" label="Sample Label" value="Sample Value" onChange={handleOnChange} />
  * ```
  */
-const TextInput = ({
+export const TextInput = ({
     type = 'text',
     id,
     label,
@@ -40,5 +40,3 @@ const TextInput = ({
         </>
     );
 };
-
-export default TextInput;

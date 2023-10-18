@@ -1,7 +1,7 @@
 import React from 'react';
 import { CheckboxProps } from '@interfaces';
 import {mergeClasses} from "@utils/index";
-import SVG from "@components/notes/SVG/SVG";
+import {SVG} from "@components/notes/SVG/SVG";
 import {getCheckboxStyle} from "@components/notes/Checkbox/Checkbox.style";
 
 /**
@@ -16,7 +16,7 @@ import {getCheckboxStyle} from "@components/notes/Checkbox/Checkbox.style";
  * <Checkbox checkboxColor="secondary" shape="cross" checked={true} onChange={myChangeHandler} />
  * ```
  */
-const Checkbox = ({
+export const Checkbox = ({
     checkboxColor = 'primary',
     shape = 'tick',
     checked,
@@ -41,5 +41,3 @@ const Checkbox = ({
         </div>
    )
 };
-
-export default Checkbox;
