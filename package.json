@@ -5,8 +5,10 @@
   "files": [
     "dist"
   ],
-  "private": true,
+  "homepage": "https://github.com/cassina/harmonic-ui",
+  "private": false,
   "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
