@@ -18,6 +18,5 @@ export default function withHarmony({ userConfig, nodeModulesPath = './node_modu
     };
 
     const finalConfig = deepmerge(harmonicTailwindConfig, userConfig);
-    console.log('FINAL: ', finalConfig.content)
     return finalConfig;
 }
