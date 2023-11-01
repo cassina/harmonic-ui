@@ -14,7 +14,7 @@ interface SocialSVGProps {
     height?: string;
 }
 
-const SVGIcon = (props: SocialSVGProps) => {
+export const SocialSVG = (props: SocialSVGProps) => {
     const {
         id,
         viewBox,
@@ -34,33 +34,33 @@ const SVGIcon = (props: SocialSVGProps) => {
 };
 
 export const FacebookSVG = () => (
-    <SVGIcon id="facebook-icon"
-             viewBox="0 0 8 19"
-             path={FACEBOOK_SVG_PATH} />
+    <SocialSVG id="facebook-icon"
+               viewBox="0 0 8 19"
+               path={FACEBOOK_SVG_PATH} />
 );
 
 export const TwitterSVG = () => (
-    <SVGIcon id="twitter-icon"
-             viewBox="0 0 20 17"
-             path={TWITTER_SVG_PATH} />
+    <SocialSVG id="twitter-icon"
+               viewBox="0 0 20 17"
+               path={TWITTER_SVG_PATH} />
 );
 
 export const GithubSVG = () => (
-    <SVGIcon id="github-icon"
-             viewBox="0 0 20 20"
-             path={GITHUB_SVG_PATH} />
+    <SocialSVG id="github-icon"
+               viewBox="0 0 20 20"
+               path={GITHUB_SVG_PATH} />
 );
 
 export const AppleSVG = () => (
-    <SVGIcon id="apple-icon"
-             viewBox="0 0 384 512"
-             path={APPLE_SVG_PATH} />
+    <SocialSVG id="apple-icon"
+               viewBox="0 0 384 512"
+               path={APPLE_SVG_PATH} />
 );
 
 export const GoogleSVG = () => {
     return(
-        <SVGIcon id="google-icon"
-                 viewBox="0 0 18 19"
-                 path={GOOGLE_SVG_PATH} />
+        <SocialSVG id="google-icon"
+                   viewBox="0 0 18 19"
+                   path={GOOGLE_SVG_PATH} />
     );
 };
