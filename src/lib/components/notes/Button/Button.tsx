@@ -16,17 +16,18 @@ import {getButtonStyle} from "@components/notes/Button/Button.style";
  * <Button label="Click me" onClick={() => alert('Button clicked!')} />
  * ```
  */
-export const Button = ({
-    label,
-    icon,
-    disabled = false,
-    type = 'button',
-    buttonColor = 'primary',
-    buttonStyle = 'filled',
-    iconX = 'left',
-    onClick,
-    className,
-    ...props
+export const Button = (
+    {
+       label,
+       icon,
+       onClick,
+       className,
+       disabled = false,
+       type = 'button',
+       buttonColor = 'primary',
+       buttonStyle = 'filled',
+       iconX = 'left',
+       ...props
 }: ButtonProps) => {
     const theme = getButtonStyle(buttonColor, buttonStyle)
     const styles = mergeClasses(className, theme);
