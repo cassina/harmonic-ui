@@ -6,7 +6,6 @@ import {convertBaseStyle} from "@utils/index";
 const buttonBaseStyle: BaseStyle = {
     font: 'font-medium text-sm',
     padding: 'px-5 py-2.5',
-    margin: 'm-2',
     border: 'rounded-md',
     display: 'inline-flex items-center justify-evenly gap-2',
     disabled: 'disabled:bg-gray-200'
