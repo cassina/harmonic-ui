@@ -49,7 +49,7 @@ describe('<ChoiceInput />', () => {
         const svg = container.querySelector('svg');
         const path = svg?.querySelector('path');
 
-        expect(path?.getAttribute('d')).toContain(shapes.heart)
+        expect(path?.getAttribute('d')).toContain(shapes.heart);
     });
 
     it('should render a radio input when type is radio', () => {

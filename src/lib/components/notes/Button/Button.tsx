@@ -29,7 +29,7 @@ export const Button = (
        iconX = 'left',
        ...props
 }: ButtonProps) => {
-    const theme = getButtonStyle(buttonColor, buttonStyle)
+    const theme = getButtonStyle(buttonColor, buttonStyle);
     const styles = mergeClasses(className, theme);
     return (
         <button
@@ -42,7 +42,7 @@ export const Button = (
             <span>{label}</span>
             {iconX === 'right' && icon}
         </button>
-    )
+    );
 };
 
 

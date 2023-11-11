@@ -9,6 +9,6 @@ const svgBaseStyle: BaseStyle = {
     appearance: 'hidden',
     special: 'peer-checked:block',
     pointer: 'pointer-events-none'
-}
+};
 
 export const getSVGStyle = () => convertBaseStyle(svgBaseStyle);

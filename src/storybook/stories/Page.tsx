@@ -13,14 +13,14 @@ export const Page: React.FC = () => {
   return (
     <article>
       <Header
-        user={user}
-        onLogin={() => setUser({ name: 'Jane Doe' })}
-        onLogout={() => setUser(undefined)}
-        onCreateAccount={() => setUser({ name: 'Jane Doe' })}
+          user={user}
+          onLogin={() => setUser({ name: 'Jane Doe' })}
+          onLogout={() => setUser(undefined)}
+          onCreateAccount={() => setUser({ name: 'Jane Doe' })}
       />
 
       <section className="storybook-page">
-        <h1>Harmonic Design</h1>
+        <h3>What is Harmonic Design?</h3>
         <p>
           We recommend building UIs with a{' '}
           <a href="https://componentdriven.org" target="_blank" rel="noopener noreferrer">
