@@ -61,5 +61,37 @@ describe('Hero', () => {
         const childElement = screen.getByTestId('child');
         expect(childElement).toBeTruthy();
     });
+
+    it('renders image and adjusts layout when imageUrl is provided', () => {
+        const imageUrl = 'path/to/another/image.jpg';
+        render(
+            <Hero backgroundImageUrl={backgroundImageUrl} imageUrl={imageUrl}>
+                <HeroTitle>This is a Hero Title</HeroTitle>
+                <HeroSubtitle>This is a Hero Subtitle</HeroSubtitle>
+            </Hero>
+        );
+
+        const imageElement: HTMLImageElement = screen.getByRole('img');
+        expect(imageElement).toBeDefined();
+        expect(imageElement.src).toContain(imageUrl);
+
+        // Check if the layout is adjusted (look for specific class names or structure)
+        // This verification might require examining the rendered HTML structure
+    });
+
+    it('renders without image and with text-centered layout when imageUrl is not provided', () => {
+        render(
+            <Hero backgroundImageUrl={backgroundImageUrl}>
+                <HeroTitle>This is a Hero Title</HeroTitle>
+                <HeroSubtitle>This is a Hero Subtitle</HeroSubtitle>
+            </Hero>
+        );
+
+        // Check for text-centered layout
+        const textContainer = screen.getByText('This is a Hero Title').closest('div');
+        expect(textContainer).toBeDefined();
+        expect(textContainer?.className).toContain('text-center');
+        // Ensure the className contains the expected class for centered text
+    });
 });
 

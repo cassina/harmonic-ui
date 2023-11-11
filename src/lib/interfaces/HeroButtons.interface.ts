@@ -1,6 +1,5 @@
-export interface HeroButtonsProps {
-    primaryActionOnClick: () => void;
-    primaryLabel: string;
-    secondaryActionOnClick: () => void;
-    secondaryLabel: string;
+import {ComponentProps} from "react";
+
+export interface HeroButtonsProps extends ComponentProps<'div'> {
+    buttonAlignment?: 'center' | 'left'
 }

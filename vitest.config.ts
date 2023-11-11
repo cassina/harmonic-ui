@@ -11,8 +11,5 @@ export default mergeConfig(viteConfig, defineConfig({
         //     ['__tests__/**', 'jsdom'],
         //     // ...
         // ]
-        coverage: {
-            include: ['src/**/*.{ts,tsx}'],
-        },
     },
 }));
