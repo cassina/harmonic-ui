@@ -1,5 +1,10 @@
 import {ComponentProps} from "react";
-import {getHeroSubtitleStyle} from "@components/notes/HeroSubtitle/HeroSubtitle.style";
+import {mergeClasses} from "@utils/index";
+import {getHeroSubtitleStyle} from "./HeroSubtitle.style";
 
-export const HeroSubtitle = ({ children }: ComponentProps<'h2'>) =>
-    <h2 className={getHeroSubtitleStyle()}>{children}</h2>;
+export const HeroSubtitle = ({ children, className }: ComponentProps<'h2'>) => {
+    const theme = getHeroSubtitleStyle();
+    const styles = mergeClasses(className, theme);
+
+    return(<h2 className={styles}>{children}</h2>);
+};
