@@ -11,7 +11,7 @@ export interface HeaderProps {
   onLogout: () => void;
   onCreateAccount: () => void;
 }
-import logo from './assets/harmonic-design-logo.png'
+import logo from './assets/harmonic-design-logo.png';
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
   <header>
     <div className="bg-primary-50 storybook-header text-accent-800">

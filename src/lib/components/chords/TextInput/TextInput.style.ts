@@ -7,6 +7,6 @@ const textInputBase: BaseStyle = {
     margin: 'm-1',
     border: 'border rounded-md',
     padding: 'p-2',
-}
+};
 
 export const getTextInputStyle = () => convertBaseStyle(textInputBase);

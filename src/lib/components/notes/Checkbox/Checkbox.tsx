@@ -24,8 +24,8 @@ export const Checkbox = ({
     className,
     ...props
 }: CheckboxProps) => {
-    const theme = getCheckboxStyle(checkboxColor)
-    const styles = mergeClasses(className, theme)
+    const theme = getCheckboxStyle(checkboxColor);
+    const styles = mergeClasses(className, theme);
 
     return(
         // I have always been of opinion that consistency is the last refuge of the unimaginative. — Oscar Wilde
@@ -39,5 +39,5 @@ export const Checkbox = ({
             />
             <SVG shape={shape}/>
         </div>
-   )
+   );
 };
