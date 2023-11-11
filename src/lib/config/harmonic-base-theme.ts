@@ -54,4 +54,4 @@ export const harmonicBaseTheme = {
             '950': '#3e1311',
         },
     }
-}
+};

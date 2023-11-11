@@ -11,4 +11,4 @@ export const convertBaseStyle = (theme: BaseStyle): string => {
 };
 export const mergeClasses = (...classes: (string | undefined | BaseStyle)[]): string => {
     return classes.filter(Boolean).join(' ');
-}
+};

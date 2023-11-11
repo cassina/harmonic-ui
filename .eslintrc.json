@@ -17,5 +17,8 @@
   ],
   "ignorePatterns": [
     "src/**/*.test.ts"
-  ]
+  ],
+  "rules": {
+    "semi": ["error", "always"]
+  }
 }
