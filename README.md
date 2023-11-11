@@ -13,9 +13,10 @@ The **Harmonic Design Theory** uses musical analogies to describe and structure 
 - **Chords**: Combinations of notes that come together to form a cohesive unit.
 - **Progressions**: Client components that guide the user experience through sequences of chords.
 - **Structures**: The overarching layouts and grids.
-- **Dynamics**: Context Components like an `<AuthContextProvider/>`.
+- **Dynamics/Context**: Context Components like an `<AuthContextProvider/>`.
+- **Hooks**: Use different React features from components.
 - **Compositions**: Complete pages or views such as a Home page or Settings page.
-- **Suites**: Groups of Compositions, such as a Web App, Docs Site, or Marketing Site.
+- **Suites**: Groups of Compositions, such as a Web App, a Documentation website, or a Marketing website.
 
 Harmonic UI serves an example to prove this theory, providing real-world examples and implementations of these concepts.
 
@@ -172,7 +173,7 @@ interface AuthFormProps extends ComponentProps<'form'>{
     onFormSubmit: () => void;
 }
 
-const AuthForm = ({
+export const AuthForm = ({
     buttonText,
     onFormSubmit,
     disabled,
@@ -203,9 +204,6 @@ const AuthForm = ({
         </form>
     </>
 );
-
-export default AuthForm;
-
 ```
 
 ## Contributing ✋

@@ -30,7 +30,7 @@ export const SocialSVG = (props: SocialSVGProps) => {
          fill="white"
          viewBox={viewBox}>
         <path d={path} fillRule="evenodd" clipRule="evenodd" />
-    </svg>)
+    </svg>);
 };
 
 export const FacebookSVG = () => (
