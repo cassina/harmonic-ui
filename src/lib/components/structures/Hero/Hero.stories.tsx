@@ -50,7 +50,7 @@ export const WithCustomBackground: StoryObj<typeof Hero> = {
         return(
             <Hero
                 isMainBanner={true}
-                backgroundImageUrl={'https://www.hdwallpapers.in/thumbs/2021/white_blue_rounds_bubbles_light_blue_background_4k_5k_hd_light_blue-t2.jpg'}
+                backgroundImageUrl={'https://cdn.discordapp.com/attachments/1087566247006314698/1172720228392767498/image_1.png?ex=656157d2&is=654ee2d2&hm=f907c6750ae095fe88727c3baa538dd8cc48e491c05cb1fb405a926910317feb&'}
             >
                 <HeroTitle>{title}</HeroTitle>
                 <HeroSubtitle>{subtitle}</HeroSubtitle>

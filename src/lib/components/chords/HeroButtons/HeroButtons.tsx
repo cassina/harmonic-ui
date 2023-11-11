@@ -10,7 +10,7 @@ export const HeroButtons = (
         secondaryLabel,
     }: HeroButtonsProps) => {
     return(
-        <div className="flex justify-center">
+        <>
             <Button
                 onClick={primaryActionOnClick}
                 label={primaryLabel}
@@ -27,6 +27,6 @@ export const HeroButtons = (
             >
                 Secondary Action
             </Button>
-        </div>
+        </>
     );
 };
