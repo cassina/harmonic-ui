@@ -33,7 +33,6 @@ export const SVG = (props: SVGProps) => {
                 return <path d={shapes.heart}/>;
             case "skull":
                 return <path d={shapes.skull}/>;
-            case "tick":
             default:
                 return <polyline points={shapes.tick}></polyline>;
         }
