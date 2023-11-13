@@ -4,10 +4,12 @@ export interface BaseStyle {
     margin?: string;
     padding?: string;
     position?: string;
+    width?: string;
     appearance?: string;
     border?: string;
     special?: string;
     pointer?: string;
     display?: string;
     disabled?: string;
+    zIndex?: string;
 }

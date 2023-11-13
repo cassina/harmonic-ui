@@ -1,8 +1,8 @@
 import React from "react";
 
 import {SVGProps} from "@interfaces";
-import {shapes} from "./SVG.config";
 import {getSVGStyle} from "@components/notes/SVG/SVG.style";
+import {SVGPaths} from "@config/svg-paths";
 
 /**
  * SVG Component
@@ -30,11 +30,11 @@ export const SVG = (props: SVGProps) => {
     const renderShape = () => {
         switch (shape) {
             case "heart":
-                return <path d={shapes.heart}/>;
+                return <path d={SVGPaths.heart}/>;
             case "skull":
-                return <path d={shapes.skull}/>;
+                return <path d={SVGPaths.skull}/>;
             default:
-                return <polyline points={shapes.tick}></polyline>;
+                return <polyline points={SVGPaths.tick}></polyline>;
         }
     };
 
