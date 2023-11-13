@@ -1,4 +1,7 @@
+import {ComponentProps} from "react";
+
 export interface IconProps {
+    ariaLabel: string;
     pathData: string;
     className?: string;
     viewBox?: string;
