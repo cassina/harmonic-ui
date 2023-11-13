@@ -6,7 +6,6 @@ import {Hero} from "@components/structures/Hero/Hero";
 import {HeroTitle} from "@components/notes/HeroTitle/HeroTitle";
 import {HeroSubtitle} from "@components/notes/HeroSubtitle/HeroSubtitle";
 import {HeroButtons} from "@components/chords/HeroButtons/HeroButtons";
-import {AppleIcon} from "@components/notes/SocialIcon/SocialIcon";
 import {Nav} from "@components/structures/Nav/Nav";
 import {NavGroup} from "@components/structures/NavGroup/NavGroup";
 import {Logo} from "@components/notes/Logo/Logo";
@@ -20,6 +19,13 @@ const secondaryButtonLabel = 'Conoce más';
 const primaryActionOnClick = () => {};
 const secondaryActionOnClick = () => {};
 
+/**
+ * This is an Example of how you can build your Landing Page Composition using notes, chords and structures.
+ * This page has a Call to Action Navbar that will render some links and a mobile menu.
+ * It has a Hero banner as well with a CTA and a secondary CTA.
+ * It showcases 3 features about this product or service
+ * It has a footer with different sections
+ */
 const CTANavbar = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const logoImageUrl = 'https://cdn.discordapp.com/attachments/1087566247006314698/1172938918061146132/matrix-core-logo-transparent.png?ex=6562237e&is=654fae7e&hm=13ce7cce4b522b318592fe1d631bc0e3bd3d1f5c395390f73b1ba2321561683b&';
@@ -110,13 +116,13 @@ export default {
         layout: 'fullscreen',
     },
     tags: ['autodocs'], // Note: 'tags' is not a standard Storybook configuration. If this is custom logic, keep it; otherwise, consider removing it.
-    argTypes: {
-        title: { control: 'text' },
-        subtitle: { control: 'text' },
-        backgroundImageUrl: { control: 'text' },
-    },
+    // argTypes: {
+    //     title: { control: 'text' },
+    //     subtitle: { control: 'text' },
+    //     backgroundImageUrl: { control: 'text' },
+    // },
 } as Meta<typeof CTANavbar>;
-export const Default: StoryObj<typeof CTANavbar> = {
+export const Example: StoryObj<typeof CTANavbar> = {
     render: () => {
         return (
             <>

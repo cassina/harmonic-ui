@@ -20,6 +20,7 @@ export const MobileMenuButton = ({ isOpen, toggleMobileMenu }: MobileMenuButtonP
 
                 {/* Icon when menu is closed */}
                 <Icon
+                    ariaLabel={'Open Mobile Menu'}
                     className={`block h-6 w-6 ${isOpen ? 'hidden' : 'block'}`}
                     fill="none"
                     stroke="currentColor"
@@ -31,6 +32,7 @@ export const MobileMenuButton = ({ isOpen, toggleMobileMenu }: MobileMenuButtonP
 
                 {/* Icon when menu is closed */}
                 <Icon
+                    ariaLabel={'Close Mobile Menu'}
                     className={`h-6 w-6 ${!isOpen ? 'hidden' : 'block'}`}
                     fill="currentColor"
                     pathData={SVGPaths.cancel}
