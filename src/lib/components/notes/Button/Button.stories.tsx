@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import {MouseEvent} from "react";
 
 import {Button} from './Button';
-import {GithubSVG} from '@components/notes/SocialSVG/SocialSVG';
+import {GithubIcon} from '@components/notes/SocialIcon/SocialIcon';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -36,7 +36,7 @@ export const With_Social_Icon: Story = {
     buttonColor: 'primary',
     buttonStyle: 'filled',
     label: 'Signup',
-    icon: <GithubSVG/>,
+    icon: <GithubIcon/>,
     onClick: (e: MouseEvent) => console.log(`The event timestamp: ${e.timeStamp}`),
   },
 };

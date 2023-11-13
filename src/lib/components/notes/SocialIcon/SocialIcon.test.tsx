@@ -3,61 +3,54 @@ import {cleanup, render} from '@testing-library/react';
 import {describe, expect, it, afterEach} from 'vitest';
 
 import {
-    FacebookSVG,
-    TwitterSVG,
-    GithubSVG,
-    AppleSVG,
-    GoogleSVG
-} from '@components/notes/SocialSVG/SocialSVG'; // Update with the correct import path
-
-import {
-    APPLE_SVG_PATH,
-    FACEBOOK_SVG_PATH,
-    GITHUB_SVG_PATH,
-    GOOGLE_SVG_PATH,
-    TWITTER_SVG_PATH
-} from "@components/notes/SocialSVG/SocialSVG.config";
+    FacebookIcon,
+    TwitterIcon,
+    GithubIcon,
+    AppleIcon,
+    GoogleIcon
+} from '@components/notes/SocialIcon/SocialIcon';
+import {SVGPaths} from "@config/svg-paths"; // Update with the correct import path
 
 describe('<SocialSVG /> components', () => {
     afterEach(cleanup);
 
     it('should render FacebookSVG correctly', () => {
-        const { container } = render(<FacebookSVG />);
+        const { container } = render(<FacebookIcon />);
         const pathElement = container.querySelector('path');
 
         expect(pathElement).toBeDefined();
-        expect(pathElement!.getAttribute('d')).toEqual(FACEBOOK_SVG_PATH);
+        expect(pathElement!.getAttribute('d')).toEqual(SVGPaths.facebook);
     });
 
     it('should render TwitterSVG correctly', () => {
-        const { container } = render(<TwitterSVG />);
+        const { container } = render(<TwitterIcon />);
         const pathElement = container.querySelector('path');
 
         expect(pathElement).toBeDefined();
-        expect(pathElement!.getAttribute('d')).toEqual(TWITTER_SVG_PATH);
+        expect(pathElement!.getAttribute('d')).toEqual(SVGPaths.twitter);
     });
 
     it('should render GithubSVG correctly', () => {
-        const { container } = render(<GithubSVG />);
+        const { container } = render(<GithubIcon />);
         const pathElement = container.querySelector('path');
 
         expect(pathElement).toBeDefined();
-        expect(pathElement!.getAttribute('d')).toEqual(GITHUB_SVG_PATH);
+        expect(pathElement!.getAttribute('d')).toEqual(SVGPaths.github);
     });
 
     it('should render AppleSVG correctly', () => {
-        const { container } = render(<AppleSVG />);
+        const { container } = render(<AppleIcon />);
         const pathElement = container.querySelector('path');
 
         expect(pathElement).toBeDefined();
-        expect(pathElement!.getAttribute('d')).toEqual(APPLE_SVG_PATH);
+        expect(pathElement!.getAttribute('d')).toEqual(SVGPaths.apple);
     });
 
     it('should render GoogleSVG correctly', () => {
-        const { container } = render(<GoogleSVG />);
+        const { container } = render(<GoogleIcon />);
         const pathElement = container.querySelector('path');
 
         expect(pathElement).toBeDefined();
-        expect(pathElement!.getAttribute('d')).toEqual(GOOGLE_SVG_PATH);
+        expect(pathElement!.getAttribute('d')).toEqual(SVGPaths.google);
     });
 });

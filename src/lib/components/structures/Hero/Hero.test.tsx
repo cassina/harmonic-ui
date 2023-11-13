@@ -1,6 +1,7 @@
 import React from 'react';
 import { describe, expect, it, afterEach } from 'vitest';
 import { render, cleanup, screen } from '@testing-library/react';
+
 import { Hero } from './Hero';
 import {HeroTitle} from "@components/notes/HeroTitle/HeroTitle";
 import {HeroSubtitle} from "@components/notes/HeroSubtitle/HeroSubtitle";
@@ -40,12 +41,14 @@ describe('Hero', () => {
         render(<Hero backgroundImageUrl={backgroundImageUrl} isMainBanner={true}><div>Content</div></Hero>);
         const bannerElement = screen.queryByRole('banner');
         expect(bannerElement).toBeDefined();
+        expect(bannerElement?.getAttribute('role')).toBe('banner');
     });
 
     it('does not apply a specific role when isMainBanner is false', () => {
-        render(<Hero backgroundImageUrl={backgroundImageUrl} isMainBanner={false}><div>Content</div></Hero>);
+        render(<Hero backgroundImageUrl={backgroundImageUrl}
+                     isMainBanner={false}><div>Content</div></Hero>);
         const bannerElement = screen.queryByRole('banner');
-        expect(bannerElement).toBeNull();
+        expect(bannerElement?.getAttribute('role')).toBeNull();
     });
 
     it('applies correct background styles', () => {

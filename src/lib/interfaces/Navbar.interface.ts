@@ -1,11 +1,6 @@
-import {PropsWithChildren} from "react";
+import {ComponentProps} from "react";
 
-interface NavbarLink {
-    label: string;
-    href: string;
-}
-
-export interface NavbarProps extends PropsWithChildren{
-    logoImageUrl: string;
-    navbarLinks: NavbarLink[];
+export interface NavProps extends ComponentProps<'nav'>{
+    fixed?: boolean;
+    bgColor?: string;
 }
