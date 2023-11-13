@@ -1,4 +1,4 @@
 export interface MobileMenuButtonProps {
-    isMobileMenuOpen: boolean;
+    isOpen: boolean;
     toggleMobileMenu: () => void;
 }
