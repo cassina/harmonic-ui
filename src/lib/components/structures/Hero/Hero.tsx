@@ -8,17 +8,19 @@ export const Hero = (
         children,
         imageUrl,
         backgroundImageUrl,
+        className,
         isMainBanner = true,
     }: HeroProps) => {
     return (
-        <section
-            role={isMainBanner ? 'banner' : undefined} // Conditional role
+        <header
+            {...(isMainBanner && { role: 'banner' })}
             style={{
                 backgroundImage: `url(${backgroundImageUrl})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover'
             }}
-            aria-label={isMainBanner ? 'Main header' : 'Hero section'} // Accessibility label
+            aria-label={isMainBanner ? 'Main header' : 'Hero section'}
+            className={className}
         >
             {
                 !imageUrl ?
@@ -35,6 +37,6 @@ export const Hero = (
                         </div>
                     </div>
             }
-        </section>
+        </header>
     );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { cleanup, fireEvent, render } from '@testing-library/react';
 import {ChoiceInput} from './ChoiceInput';
 import { describe, expect, it, afterEach, vi } from 'vitest';
-import {shapes} from "@components/notes/SVG/SVG.config";
+import {SVGPaths} from "@config/svg-paths";
 
 describe('<ChoiceInput />', () => {
     afterEach(cleanup);
@@ -49,7 +49,7 @@ describe('<ChoiceInput />', () => {
         const svg = container.querySelector('svg');
         const path = svg?.querySelector('path');
 
-        expect(path?.getAttribute('d')).toContain(shapes.heart);
+        expect(path?.getAttribute('d')).toContain(SVGPaths.heart);
     });
 
     it('should render a radio input when type is radio', () => {
