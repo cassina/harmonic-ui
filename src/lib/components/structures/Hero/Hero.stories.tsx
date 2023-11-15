@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Hero } from './Hero';
 import {HeroTitle} from "@components/notes/HeroTitle/HeroTitle";
 import {HeroSubtitle} from "@components/notes/HeroSubtitle/HeroSubtitle";
-import {HeroButtons} from "@components/chords/HeroButtons/HeroButtons";
+import {HeroButtons} from "@components/structures/HeroButtons/HeroButtons";
 import {Button} from "@components/notes/Button/Button";
 
 const title = '¿Qué vas a automatizar hoy?';

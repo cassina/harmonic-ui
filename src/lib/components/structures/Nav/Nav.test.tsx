@@ -17,7 +17,7 @@ describe('Nav', () => {
 
     it('applies base style correctly when not fixed', () => {
         render(<Nav>Content</Nav>);
-        const container = screen.getByText('Content')
+        const container = screen.getByText('Content');
         const navFixedStyle = getNavFixedStyle();
         expect(container.className.includes(navFixedStyle)).toBe(false);
     });
