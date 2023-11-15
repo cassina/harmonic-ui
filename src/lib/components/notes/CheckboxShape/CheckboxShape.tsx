@@ -1,7 +1,7 @@
 import React from "react";
 
 import {SVGProps} from "@interfaces";
-import {getSVGStyle} from "@components/notes/SVG/SVG.style";
+import {getSVGStyle} from "@components/notes/CheckboxShape/CheckboxShape.style";
 import {SVGPaths} from "@config/svg-paths";
 
 /**
@@ -17,7 +17,7 @@ import {SVGPaths} from "@config/svg-paths";
  * ```
  */
 
-export const SVG = (props: SVGProps) => {
+export const CheckboxShape = (props: SVGProps) => {
     const {
         fill = "none",
         stroke = "white",
