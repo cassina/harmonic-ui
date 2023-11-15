@@ -2,7 +2,7 @@ import {BaseStyle} from "@interfaces";
 import {convertBaseStyle} from "@utils/index";
 
 const heroSubtitleStyle: BaseStyle = {
-    font: 'mb-10 tracking-tight',
+    font: 'text-lg tracking-wide',
 };
 
 export const getHeroSubtitleStyle = () => convertBaseStyle(heroSubtitleStyle);

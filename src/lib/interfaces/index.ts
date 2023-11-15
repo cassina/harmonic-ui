@@ -1,6 +1,8 @@
 export * from './Button.interface';
 export * from './Checkbox.interface';
 export * from './Common.interface';
+export * from './Card.interface';
+export * from './CardTitle.interface';
 export * from './Hero.interface';
 export * from './HeroButtons.interface';
 export * from './Icon.interface';
@@ -11,4 +13,5 @@ export * from './MobileMenuButton.interface';
 export * from './Navbar.interface';
 export * from './NavMobileMenu.interface';
 export * from './SocialIcon.interface';
+export * from './SplitContainer.interface';
 export * from './SVG.interface';
