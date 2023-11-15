@@ -1,5 +1,3 @@
-import {ComponentProps} from "react";
-
 export interface IconProps {
     ariaLabel: string;
     pathData: string;

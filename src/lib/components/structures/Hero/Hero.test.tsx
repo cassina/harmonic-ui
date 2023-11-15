@@ -44,11 +44,24 @@ describe('Hero', () => {
         expect(bannerElement?.getAttribute('role')).toBe('banner');
     });
 
+    it('renders correctly when isMainBanner is false', () => {
+        const contentText = 'Content';
+        render(<Hero backgroundImageUrl={backgroundImageUrl} isMainBanner={false}><div>{contentText}</div></Hero>);
+        const contentDiv = screen.getByText(contentText);
+        expect(contentDiv).toBeDefined();
+        // Further checks can be added here if needed to verify the rest of the rendering logic.
+    });
+
     it('does not apply a specific role when isMainBanner is false', () => {
-        render(<Hero backgroundImageUrl={backgroundImageUrl}
-                     isMainBanner={false}><div>Content</div></Hero>);
+        render(<Hero backgroundImageUrl={backgroundImageUrl} isMainBanner={false}><div>Content</div></Hero>);
         const bannerElement = screen.queryByRole('banner');
-        expect(bannerElement?.getAttribute('role')).toBeNull();
+        expect(bannerElement).toBeNull();
+    });
+
+    it('applies the banner role when isMainBanner is true', () => {
+        render(<Hero backgroundImageUrl={backgroundImageUrl} isMainBanner={true}><div>Content</div></Hero>);
+        const bannerElement = screen.getByRole('banner');
+        expect(bannerElement).toBeDefined();
     });
 
     it('applies correct background styles', () => {
