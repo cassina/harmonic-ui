@@ -7,7 +7,7 @@ describe('Logo', () => {
 
     it('renders the logo image with the correct source', () => {
         const testImageUrl = 'https://example.com/logo.png';
-        const { container } = render(<Logo imageUrl={testImageUrl} />);
+        const { container } = render(<Logo src={testImageUrl} alt={'test'}/>);
         const logoImage = container.querySelector('img');
 
         expect(logoImage).toBeDefined();
