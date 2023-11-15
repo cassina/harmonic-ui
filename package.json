@@ -51,6 +51,7 @@
     "eslint-plugin-storybook": "^0.6.15",
     "husky": "^8.0.3",
     "jsdom": "^22.1.0",
+    "lerna": "^7.4.2",
     "react-icons": "^4.12.0",
     "standard-version": "^9.5.0",
     "storybook": "^7.5.3",
@@ -59,5 +60,8 @@
     "vite": "^4.5.0",
     "vite-plugin-dts": "^3.6.3",
     "vitest": "^0.34.6"
-  }
+  },
+  "workspaces": [
+    "src/*"
+  ]
 }
