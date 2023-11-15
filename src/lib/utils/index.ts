@@ -1,9 +1,4 @@
-import chroma from 'chroma-js';
 import {BaseStyle} from "@interfaces";
-export function getContrastColor(bgColor: string) {
-    const luminance = chroma(bgColor).luminance();
-    return luminance > 0.5 ? 'black' : 'white';
-}
 
 // Helper function to convert BaseStyles to string format
 export const convertBaseStyle = (theme: BaseStyle): string => {
