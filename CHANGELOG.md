@@ -17,21 +17,6 @@ All notable changes to this project will be documented in this file. See [standa
 * correct package version ([47f6ea9](https://github.com/cassina/harmonic-ui/commit/47f6ea99ffde5fa993ecfbf1a0c12ef06eaccf66))
 * remove console log ([#22](https://github.com/cassina/harmonic-ui/issues/22)) ([ecae8d6](https://github.com/cassina/harmonic-ui/commit/ecae8d65d8a5ff35bc64a09604c840b90fe671b2))
 
-## [1.2.0](https://github.com/cassina/harmonic-ui/compare/v1.0.2...v1.2.0) (2023-11-15)
-
-
-### Features
-
-* create base Navbar and sub components ([f298922](https://github.com/cassina/harmonic-ui/commit/f2989228c034b3fe33ade62539de962f325adae4))
-* create components to render a feature section, update related components ([989935d](https://github.com/cassina/harmonic-ui/commit/989935dbcf601a74e8db019e6d56c59a73ca438d))
-* create initial Hero component, stories, interfaces, and tests ([2111012](https://github.com/cassina/harmonic-ui/commit/21110126df8b9a45f0bf3a7e8be104b194a817c7))
-
-
-### Bug Fixes
-
-* correct package version ([47f6ea9](https://github.com/cassina/harmonic-ui/commit/47f6ea99ffde5fa993ecfbf1a0c12ef06eaccf66))
-* remove console log ([#22](https://github.com/cassina/harmonic-ui/issues/22)) ([ecae8d6](https://github.com/cassina/harmonic-ui/commit/ecae8d65d8a5ff35bc64a09604c840b90fe671b2))
-
 ### [1.0.2](https://github.com/cassina/harmonic-ui/compare/v1.0.0...v1.0.2) (2023-10-20)
 
 
