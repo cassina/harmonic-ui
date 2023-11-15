@@ -5,10 +5,10 @@ import {HeroActionsProps} from "@interfaces";
 export const HeroActions = (
     {
         children,
-        buttonAlignment = 'center',
+        alignment = 'center',
     }: HeroActionsProps) => {
     return(
-        <div className={`flex gap-4 ${buttonAlignment === 'center' ? 'justify-center' : 'justify-start' }`}>
+        <div className={`flex gap-4 ${alignment === 'center' ? 'justify-center' : 'justify-start' }`}>
             {children}
         </div>
     );
