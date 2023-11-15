@@ -5,7 +5,7 @@ import { Button } from "@components/notes/Button/Button";
 import {Hero} from "@components/structures/Hero/Hero";
 import {HeroTitle} from "@components/notes/HeroTitle/HeroTitle";
 import {HeroSubtitle} from "@components/notes/HeroSubtitle/HeroSubtitle";
-import {HeroButtons} from "@components/structures/HeroButtons/HeroButtons";
+import {HeroActions} from "@components/structures/HeroActions/HeroActions";
 import {Nav} from "@components/structures/Nav/Nav";
 import {NavGroup} from "@components/structures/NavGroup/NavGroup";
 import {Logo} from "@components/notes/Logo/Logo";
@@ -188,7 +188,7 @@ export const Example: StoryObj<typeof CTANavbar> = {
                         <HeroTitle>{title}</HeroTitle>
                         <HeroSubtitle>{subtitle}</HeroSubtitle>
 
-                        <HeroButtons >
+                        <HeroActions >
                             <Button
                                 onClick={primaryActionOnClick}
                                 label={primaryButtonLabel} />
@@ -198,7 +198,7 @@ export const Example: StoryObj<typeof CTANavbar> = {
                                 buttonColor="primary"
                                 buttonStyle="outline"
                                 label={secondaryButtonLabel} />
-                        </HeroButtons>
+                        </HeroActions>
                     </Hero>
 
                     <Hero isMainBanner={false}>

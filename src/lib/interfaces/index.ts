@@ -4,7 +4,7 @@ export * from './Common.interface';
 export * from './Card.interface';
 export * from './CardTitle.interface';
 export * from './Hero.interface';
-export * from './HeroButtons.interface';
+export * from './HeroActions.interface';
 export * from './Icon.interface';
 export * from './Input.interface';
 export * from './Label.interface';
