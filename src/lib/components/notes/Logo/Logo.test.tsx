@@ -12,6 +12,6 @@ describe('Logo', () => {
 
         expect(logoImage).toBeDefined();
         expect(logoImage?.getAttribute('src')).toBe(testImageUrl);
-        expect(logoImage?.getAttribute('alt')).toBe('Your Company');
+        expect(logoImage?.getAttribute('alt')).toBe('test');
     });
 });
