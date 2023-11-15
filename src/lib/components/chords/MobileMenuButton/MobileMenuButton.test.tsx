@@ -7,13 +7,13 @@ describe('MobileMenuButton', () => {
 
     it('renders the hamburger icon when menu is not open', () => {
         render(<MobileMenuButton isOpen={false} toggleMobileMenu={() => {}} />);
-        const hamburgerIcon = screen.getByLabelText('Close Mobile Menu');
+        const hamburgerIcon = screen.getByLabelText('Open Mobile Menu');
         expect(hamburgerIcon).toBeDefined();
     });
 
     it('renders the cancel icon when menu is open', () => {
         render(<MobileMenuButton isOpen={true} toggleMobileMenu={() => {}} />);
-        const cancelIcon = screen.getByLabelText('Open Mobile Menu');
+        const cancelIcon = screen.getByLabelText('Close Mobile Menu');
         expect(cancelIcon).toBeDefined();
     });
 

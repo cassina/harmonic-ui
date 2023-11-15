@@ -19,9 +19,9 @@ export const MobileMenuButton = ({ isOpen, toggleMobileMenu }: MobileMenuButtonP
 
                 {
                     isOpen ?
-                        <TfiClose />
+                        <TfiClose aria-label={'Close Mobile Menu'}/>
                         :
-                        <TfiMenu />
+                        <TfiMenu aria-label={'Open Mobile Menu'}/>
                 }
             </button>
         </div>
