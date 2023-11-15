@@ -96,7 +96,7 @@ export const WithImage: StoryObj<typeof Hero> = {
             >
                 <HeroTitle>{title}</HeroTitle>
                 <HeroSubtitle>{subtitle}</HeroSubtitle>
-                <HeroActions buttonAlignment={'left'}>
+                <HeroActions alignment={'left'}>
                     <Button
                     onClick={primaryActionOnClick}
                     label={primaryButtonLabel} />
@@ -121,7 +121,7 @@ export const WithImageAndCustomBackground: StoryObj<typeof Hero> = {
             >
                 <HeroTitle>{title}</HeroTitle>
                 <HeroSubtitle>{subtitle}</HeroSubtitle>
-                <HeroActions buttonAlignment={'left'}/>
+                <HeroActions alignment={'left'}/>
             </Hero>
         );
     }
