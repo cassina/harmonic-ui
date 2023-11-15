@@ -14,4 +14,4 @@ export * from './Navbar.interface';
 export * from './NavMobileMenu.interface';
 export * from './SocialIcon.interface';
 export * from './SplitContainer.interface';
-export * from './SVG.interface';
+export * from './CheckboxShape.interface';
