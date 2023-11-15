@@ -12,7 +12,7 @@ export * from './components/notes/CheckboxShape/CheckboxShape';
 
 // Chords
 export * from "./components/chords/ChoiceInput/ChoiceInput";
-export * from "./components/structures/HeroButtons/HeroButtons";
+export * from "@components/structures/HeroActions/HeroActions";
 export * from "./components/chords/TextInput/TextInput";
 
 // Structures
