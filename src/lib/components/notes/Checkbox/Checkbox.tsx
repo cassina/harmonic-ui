@@ -1,7 +1,7 @@
 import React from 'react';
 import { CheckboxProps } from '@interfaces';
 import {mergeClasses} from "@utils/index";
-import {SVG} from "@components/notes/SVG/SVG";
+import {CheckboxShape} from "@components/notes/CheckboxShape/CheckboxShape";
 import {getCheckboxStyle} from "@components/notes/Checkbox/Checkbox.style";
 
 /**
@@ -37,7 +37,7 @@ export const Checkbox = ({
                 className={styles}
                 {...props}
             />
-            <SVG shape={shape}/>
+            <CheckboxShape shape={shape}/>
         </div>
    );
 };

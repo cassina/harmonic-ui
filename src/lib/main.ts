@@ -8,7 +8,7 @@ export * from './components/notes/Label/Label';
 export * from './components/notes/Logo/Logo';
 export * from '@components/chords/MobileMenuButton/MobileMenuButton';
 export * from '@components/notes/SocialIcon/SocialIcon';
-export * from './components/notes/SVG/SVG';
+export * from '@components/notes/CheckboxShape/CheckboxShape';
 
 // Chords
 export * from "./components/chords/ChoiceInput/ChoiceInput";
