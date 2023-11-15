@@ -1,6 +1,6 @@
 import React from "react";
 
-import {SVGProps} from "@interfaces";
+import {CheckboxShapeProps} from "@interfaces";
 import {getSVGStyle} from "@components/notes/CheckboxShape/CheckboxShape.style";
 import {SVGPaths} from "@config/svg-paths";
 
@@ -9,7 +9,7 @@ import {SVGPaths} from "@config/svg-paths";
  *
  * A versatile SVG renderer that can display various shapes like heart, skull, and tick.
  *
- * @prop {SVGProps}
+ * @prop {CheckboxShapeProps}
  *
  * @example
  * ```jsx
@@ -17,7 +17,7 @@ import {SVGPaths} from "@config/svg-paths";
  * ```
  */
 
-export const CheckboxShape = (props: SVGProps) => {
+export const CheckboxShape = (props: CheckboxShapeProps) => {
     const {
         fill = "none",
         stroke = "white",

@@ -1,6 +1,6 @@
 import {SVGLineCap, SVGLineJoin, SVGShape} from "@types";
 
-export interface SVGProps {
+export interface CheckboxShapeProps {
     fill?: string;
     stroke?: string;
     strokeWidth?: string;
