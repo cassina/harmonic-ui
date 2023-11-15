@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Hero } from './Hero';
 import {HeroTitle} from "@components/notes/HeroTitle/HeroTitle";
 import {HeroSubtitle} from "@components/notes/HeroSubtitle/HeroSubtitle";
-import {HeroButtons} from "@components/structures/HeroButtons/HeroButtons";
+import {HeroActions} from "@components/structures/HeroActions/HeroActions";
 import {Button} from "@components/notes/Button/Button";
 
 const title = '¿Qué vas a automatizar hoy?';
@@ -38,7 +38,7 @@ export const Default: StoryObj<typeof Hero> = {
                 <HeroTitle>{title}</HeroTitle>
                 <HeroSubtitle>{subtitle}</HeroSubtitle>
 
-                <HeroButtons >
+                <HeroActions >
                     <Button
                         onClick={primaryActionOnClick}
                         label={primaryButtonLabel} />
@@ -48,7 +48,7 @@ export const Default: StoryObj<typeof Hero> = {
                         buttonColor="primary"
                         buttonStyle="outline"
                         label={secondaryButtonLabel} />
-                </HeroButtons>
+                </HeroActions>
             </Hero>
         );
     },
@@ -62,7 +62,7 @@ export const WithCustomBackground: StoryObj<typeof Hero> = {
             >
                 <HeroTitle>{title}</HeroTitle>
                 <HeroSubtitle>{subtitle}</HeroSubtitle>
-                <HeroButtons>
+                <HeroActions>
                     <Button
                         onClick={primaryActionOnClick}
                         label={primaryButtonLabel} />
@@ -72,7 +72,7 @@ export const WithCustomBackground: StoryObj<typeof Hero> = {
                         buttonColor="primary"
                         buttonStyle="outline"
                         label={secondaryButtonLabel} />
-                </HeroButtons>
+                </HeroActions>
             </Hero>
         );
     }
@@ -96,7 +96,7 @@ export const WithImage: StoryObj<typeof Hero> = {
             >
                 <HeroTitle>{title}</HeroTitle>
                 <HeroSubtitle>{subtitle}</HeroSubtitle>
-                <HeroButtons buttonAlignment={'left'}>
+                <HeroActions buttonAlignment={'left'}>
                     <Button
                     onClick={primaryActionOnClick}
                     label={primaryButtonLabel} />
@@ -106,7 +106,7 @@ export const WithImage: StoryObj<typeof Hero> = {
                     buttonColor="primary"
                     buttonStyle="outline"
                     label={secondaryButtonLabel} />
-                </HeroButtons>
+                </HeroActions>
             </Hero>
         );
     }
@@ -121,7 +121,7 @@ export const WithImageAndCustomBackground: StoryObj<typeof Hero> = {
             >
                 <HeroTitle>{title}</HeroTitle>
                 <HeroSubtitle>{subtitle}</HeroSubtitle>
-                <HeroButtons buttonAlignment={'left'}/>
+                <HeroActions buttonAlignment={'left'}/>
             </Hero>
         );
     }

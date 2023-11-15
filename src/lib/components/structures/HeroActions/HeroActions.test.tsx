@@ -1,5 +1,5 @@
 import {render, screen, cleanup} from '@testing-library/react';
-import { HeroButtons } from './HeroButtons'; // Adjust the import path as needed
+import { HeroActions } from './HeroActions'; // Adjust the import path as needed
 import { describe, expect, it, afterEach } from 'vitest';
 
 describe('HeroButtons Component', () => {
@@ -7,9 +7,9 @@ describe('HeroButtons Component', () => {
 
     it('renders without crashing', () => {
         render(
-            <HeroButtons>
+            <HeroActions>
                 <div>Test Child</div>
-            </HeroButtons>
+            </HeroActions>
         );
         const childElement = screen.getByText('Test Child');
         expect(childElement).toBeDefined();
@@ -17,10 +17,10 @@ describe('HeroButtons Component', () => {
 
     it('has correct class for alignment', () => {
         const { container } = render(
-            <HeroButtons>
+            <HeroActions>
                 <div>Test Child</div>
                 <div>Test Child</div>
-            </HeroButtons>
+            </HeroActions>
         );
         expect(container.firstChild).toBeDefined();
         const rootElement = container.firstChild as Element;
