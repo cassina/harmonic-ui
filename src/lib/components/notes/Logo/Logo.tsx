@@ -1,12 +1,14 @@
 import {LogoProps} from "@interfaces";
+import {mergeClasses} from "@utils/index";
 
-export const Logo = ({ imageUrl }: LogoProps) => {
+export const Logo = ({ className, src, alt, ...props }: LogoProps) => {
+    const classes = mergeClasses(className, 'h-8 w-auto')
     return (
-        <div className="flex flex-shrink-0 items-center">
+        <div className={'flex flex-shrink-0 items-center'}>
             <img
-                className="h-8 w-auto"
-                src={imageUrl}
-                alt="Your Company"
+                className={classes}
+                src={src}
+                alt={alt}
             />
         </div>
     );
