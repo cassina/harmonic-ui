@@ -1,7 +1,6 @@
 import {describe, it, expect, afterEach, vi} from 'vitest';
 import { cleanup, render, fireEvent, screen } from '@testing-library/react';
 import { MobileMenuButton } from './MobileMenuButton';
-import { SVGPaths } from '@config/svg-paths';
 
 describe('MobileMenuButton', () => {
     afterEach(cleanup);

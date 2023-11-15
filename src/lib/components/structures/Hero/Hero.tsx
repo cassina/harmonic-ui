@@ -12,7 +12,7 @@ export const Hero = (
         isMainBanner = true,
     }: HeroProps) => {
     return (
-        <header
+        <section
             {...(isMainBanner && { role: 'banner' })}
             style={{
                 backgroundImage: `url(${backgroundImageUrl})`,
@@ -24,7 +24,7 @@ export const Hero = (
         >
             {
                 !imageUrl ?
-                    <div className="text-center py-10 px-5 md:py-20 md:px-20 max-w-2xl mx-auto">
+                    <div className={`${isMainBanner ? 'space-y-10 md:py-20 md:px-20' : 'space-y-5 md:py-10 md:px-10'} text-center py-10 px-5  max-w-2xl mx-auto`}>
                         { children }
                     </div>
                 :
@@ -37,6 +37,6 @@ export const Hero = (
                         </div>
                     </div>
             }
-        </header>
+        </section>
     );
 };
