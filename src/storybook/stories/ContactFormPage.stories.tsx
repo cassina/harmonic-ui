@@ -177,7 +177,7 @@ const ContactFromNavbar = () => {
                 {/* Left Part */}
                 <div className="flex flex-1 items-center pl-2 sm:items-stretch sm:justify-start">
                     {/* Logo */}
-                    <Logo imageUrl={logoImageUrl}/>
+                    <Logo src={logoImageUrl} alt={'test'}/>
 
                     {/* Navbar Links */}
                     <div className="hidden sm:ml-6 sm:block">
