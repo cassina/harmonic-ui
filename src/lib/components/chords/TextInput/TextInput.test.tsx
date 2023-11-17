@@ -1,7 +1,8 @@
 import React from 'react';
-import { cleanup, fireEvent, render } from '@testing-library/react';
-import {TextInput} from './TextInput';
 import { describe, expect, it, afterEach, vi } from 'vitest';
+import { cleanup, fireEvent, render } from '@testing-library/react';
+
+import {TextInput} from './TextInput';
 
 describe('<TextInput />', () => {
     afterEach(cleanup);
@@ -67,5 +68,15 @@ describe('<TextInput />', () => {
 
         expect(label).toBeDefined();
         expect(label.htmlFor).toBe("test-text-input");
+    });
+
+    it('should render an input with the expected classes', () => {
+        const { getByRole } = render(<TextInput id="test-text-input"
+                                                label={'Test'}
+                                                className={'custom-class'}
+                                                onChange={onChangeHandler} />);
+
+        const input = getByRole('textbox')
+        expect(input.className).toBe('custom-class text-primary-950 border rounded-md p-2 w-full');
     });
 });
