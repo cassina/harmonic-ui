@@ -1,7 +1,29 @@
 import {HeroProps} from "@interfaces";
+import React, {ReactElement} from "react";
 
 /**
+ * Hero Structure Component
  *
+ * The Hero Structure is used to create a hero section with an optional background image and text content.
+ *
+ * @component
+ * @param {HeroProps} props - The component props.
+ * @param {ReactNode} props.children - The content to be displayed inside the hero section.
+ * @param {string} props.imageUrl - The URL of the image to be displayed alongside the content.
+ * @param {string} props.backgroundImageUrl - The URL of the background image for the hero section.
+ * @param {string} props.className - Additional CSS classes to be applied to the hero section.
+ * @param {boolean} props.isMainBanner - Whether the hero section serves as the main banner (default is `true`).
+ * @returns {ReactElement} - The Hero Structure ReactElement.
+ *
+ * @example
+ * // Example usage of the Hero component
+ * <Hero
+ *   imageUrl="/path/to/image.jpg"
+ *   backgroundImageUrl="/path/to/background-image.jpg"
+ *   className="custom-class"
+ *   isMainBanner={true}>
+ *     {Content goes here}
+ * </Hero>
  */
 export const Hero = (
     {
@@ -10,15 +32,19 @@ export const Hero = (
         backgroundImageUrl,
         className,
         isMainBanner = true,
-    }: HeroProps) => {
+    }: HeroProps): ReactElement => {
     return (
         <section
             {...(isMainBanner && { role: 'banner' })}
-            style={{
-                backgroundImage: `url(${backgroundImageUrl})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover'
-            }}
+            {
+                ...(backgroundImageUrl && {
+                    style:{
+                        backgroundImage: `url(${backgroundImageUrl})`,
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: 'cover'
+                    }
+                })
+            }
             aria-label={isMainBanner ? 'Main header' : 'Hero section'}
             className={className}
         >
