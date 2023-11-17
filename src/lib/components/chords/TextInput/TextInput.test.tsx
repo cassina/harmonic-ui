@@ -76,7 +76,7 @@ describe('<TextInput />', () => {
                                                 className={'custom-class'}
                                                 onChange={onChangeHandler} />);
 
-        const input = getByRole('textbox')
+        const input = getByRole('textbox');
         expect(input.className).toBe('custom-class text-primary-950 border rounded-md p-2 w-full');
     });
 });
