@@ -2,6 +2,7 @@ import {Label} from "@components/notes/Label/Label";
 import {TextInputProps} from "@interfaces";
 import {mergeClasses} from "@utils/index";
 import {getTextInputStyle} from "@components/chords/TextInput/TextInput.style";
+import {ReactElement} from "react";
 
 /**
  * TextInput Component
@@ -23,7 +24,7 @@ export const TextInput = ({
     onChange,
     className,
     ...props
-}: TextInputProps) => {
+}: TextInputProps): ReactElement => {
     return (
         <>
             {label && (
