@@ -17,7 +17,7 @@ describe('Footer', () => {
     it('applies default styling', () => {
         render(<Footer>Footer Content</Footer>);
         const footerElement = screen.getByText('Footer Content');
-        expect(footerElement?.className).toContain('p-10 pt-14 md:px-40 md:pt-40 md:pb-14');
+        expect(footerElement?.className).toContain('p-10 pt-14 max-w-3xl md:pt-32 md:pb-14 mx-auto');
     });
 
     it('merges custom class names correctly', () => {

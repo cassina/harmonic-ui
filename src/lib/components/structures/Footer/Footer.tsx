@@ -1,8 +1,12 @@
-import {ComponentProps} from "react";
+import {ComponentProps, ReactElement} from "react";
 import {mergeClasses} from "@utils/index";
 
-export const Footer = ({ children, className, ...props}: ComponentProps<'div'>) => {
-    const classes = mergeClasses(className, 'p-10 pt-14 md:px-40 md:pt-40 md:pb-14 ');
+export const Footer = ({
+    children,
+    className,
+    ...props
+}: ComponentProps<'div'>): ReactElement => {
+    const classes = mergeClasses(className, 'p-10 pt-14 max-w-3xl md:pt-32 md:pb-14 mx-auto');
     return(
         <div {...props}
              className={classes}>
