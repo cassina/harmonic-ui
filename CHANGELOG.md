@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/cassina/harmonic-ui/compare/v1.1.0...v1.1.1) (2023-11-17)
+
+
+### Bug Fixes
+
+* add tracking option to Heading components ([bda4a26](https://github.com/cassina/harmonic-ui/commit/bda4a265fedca90ca9274fefe327426a3abb90ae))
+* improve Hero Structure component ([5b4f4a9](https://github.com/cassina/harmonic-ui/commit/5b4f4a901655c2e4bcd17331c431bcfe527bfd68))
+* **lint:** run lint fix ([e0b11a4](https://github.com/cassina/harmonic-ui/commit/e0b11a472ab962e0bdbf0c331f07acd81b0ec126))
+* **style:** improve style for Footer ([b943fb9](https://github.com/cassina/harmonic-ui/commit/b943fb99ea7fdbeae69e1286472a0f3dcd10221f))
+* **TextInput:** remove margin and improve styles ([79aa703](https://github.com/cassina/harmonic-ui/commit/79aa7037def1eda3f1c959bb3ad9ec2a23f0bd1d))
+
 ## [1.1.0](https://github.com/cassina/harmonic-ui/compare/v1.0.2...v1.1.0) (2023-11-15)
 
 
