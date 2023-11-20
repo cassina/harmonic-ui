@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/cassina/harmonic-ui/compare/v1.1.1...v2.0.0) (2023-11-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* react, react-dom, and tailwind now need to be installed separately, ensuring correct version compatibility
+
+### Features
+
+* move react, react-dom to peerDependencies ([ecb7a9f](https://github.com/cassina/harmonic-ui/commit/ecb7a9fdf1ee7b40415471dea50e4d9f47dac620))
+
 ### [1.1.1](https://github.com/cassina/harmonic-ui/compare/v1.1.0...v1.1.1) (2023-11-17)
 
 
