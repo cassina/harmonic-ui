@@ -35,17 +35,24 @@ export const mergePriorityClasses = (userClasses: string | undefined, ourClasses
     if (!userClasses) {
         return ourClasses;
     }
+
+    // Split the class strings into arrays
     const userClassesArr = userClasses.split(' ');
     const ourClassesArr = ourClasses.split(' ');
 
-    userClassesArr.forEach((userClass: string) => {
+    // Create a set to store unique user class types
+    const userClassTypes = new Set();
+    userClassesArr.forEach(userClass => {
         const userClassType = userClass.split('-')[0];
-        const index = ourClassesArr.findIndex((c: string) => c.startsWith(userClassType));
-
-        if (index > -1) {
-            ourClassesArr.splice(index, 1);
-        }
+        userClassTypes.add(userClassType);
     });
 
-    return userClassesArr.concat(ourClassesArr).join(' ');
+    // Filter out our classes that have a type present in userClassTypes
+    const filteredOurClasses = ourClassesArr.filter(ourClass => {
+        const ourClassType = ourClass.split('-')[0];
+        return !userClassTypes.has(ourClassType);
+    });
+
+    // Concatenate the user classes with the filtered our classes
+    return userClassesArr.concat(filteredOurClasses).join(' ');
 };
