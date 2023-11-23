@@ -1,8 +1,8 @@
 import {ComponentProps} from "react";
-import {mergeClasses} from "@utils/index";
+import {mergePriorityClasses} from "@utils/index";
 
 export const CardBody = ({ children, className, ...props}: ComponentProps<'div'>) => {
-    const classes = mergeClasses(className, 'px-4 flex-1');
+    const classes = mergePriorityClasses(className, 'px-4 flex-1');
     return(
         <div {...props}
              className={classes}>

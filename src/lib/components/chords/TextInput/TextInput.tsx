@@ -1,6 +1,6 @@
 import {Label} from "@components/notes/Label/Label";
 import {TextInputProps} from "@interfaces";
-import {mergeClasses} from "@utils/index";
+import {mergePriorityClasses} from "@utils/index";
 import {getTextInputStyle} from "@components/chords/TextInput/TextInput.style";
 import {ReactElement} from "react";
 
@@ -31,7 +31,7 @@ export const TextInput = ({
                 <Label htmlFor={id}
                        text={label}/>
             )}
-            <input className={mergeClasses(className, getTextInputStyle())}
+            <input className={mergePriorityClasses(className, getTextInputStyle())}
                    type={type}
                    name={id}
                    id={id}

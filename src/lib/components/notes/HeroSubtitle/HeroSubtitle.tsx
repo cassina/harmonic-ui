@@ -1,7 +1,7 @@
 import {ReactElement} from "react";
 
 import {HeadingProps} from "@interfaces";
-import {mergeClasses} from "@utils/index";
+import {mergePriorityClasses} from "@utils/index";
 import {textTracking} from "@config/tailwind-classes.config";
 
 /**
@@ -42,8 +42,8 @@ export const HeroSubtitle = (props: HeadingProps): ReactElement => {
         tracking = 'normal',
         ...otherProps
     } = props;
-    const baseClasses: string = 'text-lg';
-    const styles: string = mergeClasses(className, textTracking[tracking], baseClasses);
+    const baseClasses: string = `${textTracking[tracking]} text-lg`;
+    const styles: string = mergePriorityClasses(className, baseClasses);
 
     return(
         <h2 {...otherProps}

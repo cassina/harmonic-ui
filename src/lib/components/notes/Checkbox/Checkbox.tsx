@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckboxProps } from '@interfaces';
-import {mergeClasses} from "@utils/index";
+import {mergePriorityClasses} from "@utils/index";
 import {CheckboxShape} from "@components/notes/CheckboxShape/CheckboxShape";
 import {getCheckboxStyle} from "@components/notes/Checkbox/Checkbox.style";
 
@@ -25,7 +25,7 @@ export const Checkbox = ({
     ...props
 }: CheckboxProps) => {
     const theme = getCheckboxStyle(checkboxColor);
-    const styles = mergeClasses(className, theme);
+    const styles = mergePriorityClasses(className, theme);
 
     return(
         // I have always been of opinion that consistency is the last refuge of the unimaginative. — Oscar Wilde

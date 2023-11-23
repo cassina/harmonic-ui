@@ -1,7 +1,7 @@
 import {ReactElement} from "react";
 
 import {HeadingProps} from "@interfaces";
-import {mergeClasses} from "@utils/index";
+import {mergePriorityClasses} from "@utils/index";
 import {textTracking} from "@config/tailwind-classes.config";
 
 /**
@@ -41,8 +41,8 @@ export const SectionTitle = (props: HeadingProps): ReactElement => {
         tracking = 'wide',
         ...otherProps
     } = props;
-    const baseClasses: string = 'text-2xl lg:text-3xl 2xl:text-4xl font-semibold';
-    const styles: string = mergeClasses(className, textTracking[tracking], baseClasses);
+    const baseClasses: string = `${textTracking[tracking]} text-2xl lg:text-3xl 2xl:text-4xl font-semibold`;
+    const styles: string = mergePriorityClasses(className, baseClasses);
 
     return(
         <h3 {...otherProps}
