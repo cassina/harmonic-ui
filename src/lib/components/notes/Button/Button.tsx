@@ -1,6 +1,6 @@
 import React from "react";
 import {ButtonProps} from "@interfaces";
-import {mergeClasses} from "@utils/index";
+import {mergePriorityClasses} from "@utils/index";
 import {getButtonStyle} from "@components/notes/Button/Button.style";
 
 
@@ -30,7 +30,7 @@ export const Button = (
        ...props
 }: ButtonProps) => {
     const theme = getButtonStyle(buttonColor, buttonStyle);
-    const styles = mergeClasses(className, theme);
+    const styles = mergePriorityClasses(className, theme);
     return (
         <button
             disabled={disabled}

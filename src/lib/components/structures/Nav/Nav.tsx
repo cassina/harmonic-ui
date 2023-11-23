@@ -3,7 +3,7 @@
 import React from 'react';
 import {NavProps} from "@interfaces";
 import {getNavFixedStyle} from "@components/structures/Nav/Nav.style";
-import {mergeClasses} from "@utils/index";
+import {mergePriorityClasses} from "@utils/index";
 
 export const Nav = (
     {
@@ -12,7 +12,7 @@ export const Nav = (
         fixed = false,
     }: NavProps) => {
     const navBaseStyle = fixed ?  getNavFixedStyle() : '';
-    const navStyle = mergeClasses(className, navBaseStyle);
+    const navStyle = mergePriorityClasses(className, navBaseStyle);
 
     return (
         <nav className={navStyle}>
