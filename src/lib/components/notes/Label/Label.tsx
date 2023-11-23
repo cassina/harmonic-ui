@@ -1,5 +1,5 @@
 import {LabelProps} from "@interfaces";
-import {mergeClasses} from "@utils/index";
+import {mergePriorityClasses} from "@utils/index";
 import {getLabelStyle} from "@components/notes/Label/Label.style";
 
 /**
@@ -23,7 +23,7 @@ export const Label = ({
 
     return(
         <label htmlFor={htmlFor}
-               className={mergeClasses(className, getLabelStyle())}
+               className={mergePriorityClasses(className, getLabelStyle())}
                {...props}>
             {text}
         </label>
