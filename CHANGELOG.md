@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/cassina/harmonic-ui/compare/v2.0.0...v2.0.1) (2023-11-23)
+
+
+### Bug Fixes
+
+* ensure mergeClasses prioritizes user classes and avoids duplication, add tests, refactor components ([1b229e8](https://github.com/cassina/harmonic-ui/commit/1b229e83a45db19c6d16036c428e50059216a8a5))
+
 ## [2.0.0](https://github.com/cassina/harmonic-ui/compare/v1.1.1...v2.0.0) (2023-11-20)
 
 
